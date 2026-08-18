@@ -354,16 +354,28 @@
     }
   
     .navbar__nav {
-      gap: 18px;
+      gap: 0;
     }
   
     .navbar__brand span {
       font-size: 1.15rem;
     }
-  
+
     .navbar__nav a {
-      font-size: 0.58rem;
+        padding: 12px 6px;
+        font-size: 0.58rem;
     }
+    
+    .navbar__nav a:last-child {
+        border-left: 1px solid var(--color-line);
+    }
+    
+    .navbar__nav a:last-child::before {
+        display: none;
+    }
+
+
+
   
     .home__intro {
       min-height: auto;
