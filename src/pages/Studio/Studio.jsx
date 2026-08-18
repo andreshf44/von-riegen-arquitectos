@@ -34,7 +34,7 @@ const timeline = [
 export default function Studio() {
   return (
     <main className="studio">
-      <Navbar />
+      <Navbar variant="full" />
 
       <section className="studio__hero">
         <div className="studio__intro">

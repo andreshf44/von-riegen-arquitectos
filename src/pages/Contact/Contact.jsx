@@ -7,7 +7,7 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <main className="contact">
-      <Navbar />
+      <Navbar variant="full" />
 
       <section className="contact__main">
         <div className="contact__left">

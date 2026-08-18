@@ -1,0 +1,326 @@
+/* src/components/layout/Navbar.css */
+
+.navbar {
+  width: 100%;
+  height: 90px;
+
+  padding: 0 var(--page-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  position: relative;
+  z-index: 20;
+}
+
+/* ========================================
+   BRAND
+======================================== */
+
+.navbar__brand {
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  color: inherit;
+  line-height: 1;
+}
+
+.navbar__brand span {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
+}
+
+.navbar__brand small {
+  margin-top: 8px;
+
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+}
+
+/* ========================================
+   NAV
+======================================== */
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__nav a {
+  position: relative;
+
+  color: inherit;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition: opacity 200ms ease;
+}
+
+.navbar__nav a:hover {
+  opacity: 0.55;
+}
+
+/* ========================================
+   SIMPLE VARIANT
+   Home / Estudio / Contacto
+======================================== */
+
+.navbar--simple .navbar__nav {
+  gap: clamp(28px, 4vw, 64px);
+}
+
+.navbar--simple .navbar__nav a {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+}
+
+/* Separador entre ESTUDIO y CONTACTO */
+
+.navbar--simple .navbar__separator {
+  display: none;
+}
+
+.navbar--simple .navbar__nav a:last-child::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: calc(clamp(28px, 4vw, 64px) / -2);
+
+  width: 1px;
+  height: 44px;
+
+  background: var(--color-line);
+
+  transform: translateY(-50%);
+}
+
+/* ========================================
+   FULL VARIANT
+======================================== */
+
+.navbar--full {
+  gap: clamp(28px, 3vw, 48px);
+
+  border-bottom: 1px solid var(--color-line);
+}
+
+.navbar--full .navbar__nav {
+  margin-left: auto;
+
+  gap: clamp(20px, 2.2vw, 38px);
+}
+
+.navbar--full .navbar__nav a {
+  padding: 8px 0;
+
+  font-size: 0.58rem;
+  letter-spacing: 0.11em;
+}
+
+/* underline */
+
+.navbar--full .navbar__nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: currentColor;
+
+  transition: width 250ms ease;
+}
+
+.navbar--full .navbar__nav a:hover::after,
+.navbar--full .navbar__nav a.active::after {
+  width: 100%;
+}
+
+/* ========================================
+   MENU ICON
+======================================== */
+
+.navbar__menu {
+  width: 30px;
+  height: 30px;
+
+  margin-left: clamp(22px, 2.5vw, 38px);
+  padding: 0;
+
+  flex-shrink: 0;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  border: 0;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+.navbar__menu span {
+  width: 17px;
+  height: 1px;
+
+  display: block;
+
+  background: currentColor;
+}
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1150px) {
+  .navbar--full .navbar__nav {
+    gap: 17px;
+  }
+
+  .navbar--full .navbar__nav a {
+    font-size: 0.52rem;
+    letter-spacing: 0.09em;
+  }
+
+  .navbar__menu {
+    margin-left: 18px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding-left: clamp(22px, 4vw, 40px);
+    padding-right: clamp(22px, 4vw, 40px);
+  }
+
+  /* FULL:
+     ocultamos links y dejamos menú */
+
+  .navbar--full .navbar__nav {
+    display: none;
+  }
+
+  .navbar--full .navbar__menu {
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+  .navbar {
+    height: 90px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* BRAND */
+
+  .navbar__brand span {
+    font-size: 1.15rem;
+  }
+
+  .navbar__brand small {
+    margin-top: 7px;
+
+    font-size: 0.48rem;
+    letter-spacing: 0.3em;
+  }
+
+  /* SIMPLE */
+
+  .navbar--simple .navbar__nav {
+    gap: 0;
+  }
+
+  .navbar--simple .navbar__nav a {
+    padding: 12px 10px;
+
+    font-size: 0.56rem;
+    letter-spacing: 0.13em;
+  }
+
+  /* anulamos pseudo-elemento desktop */
+
+  .navbar--simple .navbar__nav a:last-child::before {
+    display: none;
+  }
+
+  /* separador mobile */
+
+  .navbar--simple .navbar__nav a:last-child {
+    margin-left: 3px;
+    padding-left: 14px;
+
+    border-left: 1px solid var(--color-line);
+  }
+
+  /* FULL */
+
+  .navbar--full .navbar__menu {
+    width: 26px;
+    height: 26px;
+  }
+
+  .navbar__menu span {
+    width: 15px;
+  }
+}
+
+/* ========================================
+   VERY SMALL
+======================================== */
+
+@media (max-width: 420px) {
+  .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .navbar__brand span {
+    font-size: 1rem;
+  }
+
+  .navbar__brand small {
+    font-size: 0.42rem;
+  }
+
+  .navbar--simple .navbar__nav a {
+    padding-left: 7px;
+    padding-right: 7px;
+
+    font-size: 0.5rem;
+  }
+
+  .navbar--simple .navbar__nav a:last-child {
+    margin-left: 2px;
+    padding-left: 10px;
+  }
+}
