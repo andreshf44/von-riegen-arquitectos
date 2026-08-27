@@ -1,0 +1,1475 @@
+/* src/pages/Architecture/Education.css */
+
+.education-page {
+  min-height: 100vh;
+
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+
+/* =========================================
+   SHARED
+========================================= */
+
+.education-eyebrow {
+  display: block;
+
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+
+.education-small-line {
+  width: 31px;
+  height: 1px;
+
+  margin: 25px 0;
+
+  background: var(--color-text);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.education-hero {
+  min-height: 565px;
+
+  display: grid;
+  grid-template-columns: 0.68fr 1.32fr;
+
+  border-bottom: 1px solid var(--color-line);
+}
+
+
+.education-hero__copy {
+  padding:
+    clamp(55px, 6vw, 90px)
+    clamp(40px, 5vw, 70px)
+    clamp(55px, 6vw, 90px)
+    var(--page-padding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.education-hero__copy h1 {
+  margin: 28px 0 0;
+
+  font-family: var(--font-serif);
+
+  font-size:
+    clamp(3.8rem, 5vw, 6.5rem);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.045em;
+}
+
+
+.education-hero__copy h2 {
+  margin: 0;
+
+  font-family: var(--font-serif);
+
+  font-size: 1.35rem;
+
+  font-weight: 400;
+}
+
+
+.education-hero__copy > p {
+  max-width: 380px;
+
+  margin: 30px 0 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.75;
+}
+
+
+.education-hero__note {
+  margin-top: 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  font-size: 0.58rem;
+
+  line-height: 1.45;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+
+.education-hero__note small {
+  text-transform: none;
+
+  letter-spacing: 0;
+}
+
+
+.education-info {
+  width: 18px;
+  height: 18px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    var(--color-text);
+
+  border-radius: 50%;
+
+  font-family: var(--font-serif);
+
+  font-size: 0.7rem;
+}
+
+
+.education-hero__visual {
+  overflow: hidden;
+
+  background:
+    var(--color-background);
+}
+
+
+.education-hero__visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   TOPICS NAV
+========================================= */
+
+.education-topics {
+  min-height: 110px;
+
+  padding:
+    0
+    var(--page-padding);
+
+  display: grid;
+
+  grid-template-columns:
+    0.48fr
+    1.7fr;
+
+  align-items: stretch;
+
+  border-bottom:
+    1px solid
+    var(--color-line);
+}
+
+
+.education-topics__label {
+  display: flex;
+
+  align-items: center;
+
+  font-size: 0.6rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+}
+
+
+.education-topics__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+}
+
+
+.education-topic-link {
+  padding:
+    20px
+    25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-left:
+    1px solid
+    var(--color-line);
+
+  color: inherit;
+
+  transition:
+    background 200ms ease;
+}
+
+
+.education-topic-link:hover {
+  background:
+    rgba(0, 0, 0, 0.025);
+}
+
+
+.education-topic-link > span {
+  font-family:
+    var(--font-serif);
+
+  font-size: 1.55rem;
+}
+
+
+.education-topic-link strong {
+  margin-top: 9px;
+
+  font-size: 0.57rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================
+   RESEARCH
+========================================= */
+
+.education-research {
+  width: 100%;
+}
+
+
+.education-research__item {
+  position: relative;
+
+  border-bottom:
+    1px solid
+    var(--color-line);
+}
+
+
+.education-research__row {
+  min-height: 280px;
+
+  padding:
+    20px
+    var(--page-padding);
+
+  display: grid;
+
+  grid-template-columns:
+    0.15fr
+    0.42fr
+    0.55fr
+    0.66fr
+    0.42fr;
+
+  gap:
+    clamp(25px, 3vw, 50px);
+
+  align-items: center;
+
+  scroll-margin-top: 90px;
+
+  transition:
+    background 300ms ease;
+}
+
+
+.education-research__item--open
+.education-research__row {
+  background:
+    rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.education-research__number {
+  align-self: start;
+
+  padding-top: 8px;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    clamp(2.6rem, 3.5vw, 4.2rem);
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   COPY
+========================================= */
+
+.education-research__copy h2 {
+  margin:
+    0
+    0
+    24px;
+
+  font-size: 0.68rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+}
+
+
+.education-research__copy p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color:
+    var(--color-muted);
+
+  font-size: 0.76rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   SKETCH
+========================================= */
+
+.education-research__sketch {
+  height: 220px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+.education-research__sketch img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.education-research__image {
+  height: 220px;
+
+  overflow: hidden;
+}
+
+
+.education-research__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 500ms ease;
+}
+
+
+.education-research__row:hover
+.education-research__image img {
+  transform:
+    scale(1.015);
+}
+
+
+/* =========================================
+   IDEA
+========================================= */
+
+.education-research__idea {
+  min-height: 200px;
+
+  padding-left: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  border-left:
+    1px solid
+    var(--color-line);
+}
+
+
+.education-research__idea > svg {
+  width: 28px;
+  height: 28px;
+
+  margin-bottom: 20px;
+}
+
+
+.education-research__idea > span {
+  font-size: 0.55rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+}
+
+
+.education-research__idea p {
+  max-width: 245px;
+
+  margin:
+    10px
+    0
+    0;
+
+  color:
+    var(--color-muted);
+
+  font-size: 0.71rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   VER MÁS BUTTON
+========================================= */
+
+.education-more {
+  margin-top: auto;
+
+  padding:
+    20px
+    0
+    0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  font-family: inherit;
+
+  font-size: 0.57rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+}
+
+
+.education-more svg {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  transition:
+    transform 200ms ease;
+}
+
+
+.education-more:hover svg {
+  transform:
+    translateX(5px);
+}
+
+
+.education-more[aria-expanded="true"]:hover svg {
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================
+   EXPANDED DETAIL
+========================================= */
+
+.education-research__detail {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  background:
+    rgba(235, 231, 221, 0.28);
+
+  overflow: hidden;
+
+  transition:
+    grid-template-rows
+      450ms
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity
+      250ms ease,
+    visibility
+      0s linear 450ms;
+}
+
+
+.education-research__detail--open {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transition:
+    grid-template-rows
+      450ms
+      cubic-bezier(0.22, 1, 0.36, 1),
+    opacity
+      300ms ease;
+}
+
+
+.education-research__detail > * {
+  min-height: 0;
+}
+
+
+.education-research__detail-inner {
+  min-height: 0;
+
+  padding:
+    45px
+    var(--page-padding)
+    48px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.7fr
+    1.25fr
+    1fr
+    auto;
+
+  gap:
+    clamp(35px, 5vw, 80px);
+
+  align-items: start;
+
+  border-top:
+    1px solid
+    var(--color-line);
+}
+
+
+/* DETAIL TITLE */
+
+.education-research__detail-title {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+.education-research__detail-title > span {
+  font-family:
+    var(--font-serif);
+
+  font-size: 1.15rem;
+}
+
+
+.education-research__detail-title h3 {
+  max-width: 290px;
+
+  margin: 0;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    clamp(1.9rem, 2.2vw, 2.9rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* DETAIL COPY */
+
+.education-research__detail-copy {
+  max-width: 500px;
+
+  margin: 0;
+
+  color:
+    var(--color-muted);
+
+  font-size: 0.78rem;
+
+  line-height: 1.8;
+}
+
+
+/* DETAIL FACTORS */
+
+.education-research__detail-factors {
+  padding-left: 30px;
+
+  border-left:
+    1px solid
+    var(--color-line);
+}
+
+
+.education-research__detail-factors > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 0.56rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+}
+
+
+.education-research__detail-factors ul {
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+
+  list-style: none;
+}
+
+
+.education-research__detail-factors li {
+  position: relative;
+
+  padding-left: 14px;
+
+  color:
+    var(--color-muted);
+
+  font-size: 0.7rem;
+
+  line-height: 1.5;
+}
+
+
+.education-research__detail-factors li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0.68em;
+
+  width: 3px;
+
+  height: 3px;
+
+  border-radius: 50%;
+
+  background:
+    var(--color-text);
+}
+
+
+/* DETAIL CLOSE */
+
+.education-research__detail-close {
+  padding: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  font-family: inherit;
+
+  font-size: 0.56rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+}
+
+
+.education-research__detail-close svg {
+  width: 15px;
+
+  height: 15px;
+
+  transition:
+    transform 200ms ease;
+}
+
+
+.education-research__detail-close:hover svg {
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.education-cta {
+  position: relative;
+
+  min-height: 370px;
+
+  padding:
+    40px
+    var(--page-padding);
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    0.8fr
+    auto;
+
+  gap:
+    clamp(40px, 5vw, 80px);
+
+  align-items: center;
+
+  background-color:
+    #f3f1eb;
+
+  background-image:
+    url("/images/education/cta-lake-volcan.png");
+
+  background-size: cover;
+
+  background-position:
+    center 76%;
+
+  background-repeat:
+    no-repeat;
+
+  border-bottom:
+    1px solid
+    var(--color-line);
+
+  overflow: hidden;
+}
+
+
+.education-cta::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+
+      rgba(
+        243,
+        241,
+        235,
+        0.25
+      ),
+
+      rgba(
+        243,
+        241,
+        235,
+        0.08
+      ),
+
+      rgba(
+        243,
+        241,
+        235,
+        0.02
+      )
+    );
+
+  pointer-events: none;
+}
+
+
+.education-cta > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.education-cta h2 {
+  max-width: 550px;
+
+  margin: 0;
+
+  font-family:
+    var(--font-serif);
+
+  font-size:
+    clamp(
+      2.4rem,
+      3.3vw,
+      4rem
+    );
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.035em;
+}
+
+
+.education-cta p {
+  max-width: 350px;
+
+  margin: 0;
+
+  padding:
+    18px
+    22px;
+
+  color:
+    var(--color-muted);
+
+  background:
+    rgba(
+      245,
+      242,
+      235,
+      0.65
+    );
+
+  backdrop-filter:
+    blur(3px);
+
+  -webkit-backdrop-filter:
+    blur(3px);
+
+  font-size: 0.78rem;
+
+  line-height: 1.7;
+}
+
+
+.education-cta__button {
+  width: 205px;
+
+  padding:
+    17px
+    19px;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  border:
+    1px solid
+    rgba(
+      34,
+      33,
+      30,
+      0.5
+    );
+
+  background:
+    rgba(
+      245,
+      242,
+      235,
+      0.72
+    );
+
+  backdrop-filter:
+    blur(4px);
+
+  -webkit-backdrop-filter:
+    blur(4px);
+
+  font-size: 0.62rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+
+.education-cta__button:hover {
+  background:
+    rgba(
+      245,
+      242,
+      235,
+      0.96
+    );
+
+  border-color:
+    var(--color-text);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.education-cta__button svg {
+  width: 17px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .education-research__row {
+    grid-template-columns:
+      0.15fr
+      0.55fr
+      0.8fr
+      0.5fr;
+  }
+
+
+  .education-research__sketch {
+    display: none;
+  }
+
+
+  .education-topics {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .education-topics__label {
+    min-height: 65px;
+  }
+
+
+  .education-research__detail-inner {
+    grid-template-columns:
+      0.7fr
+      1.3fr;
+
+    gap: 35px;
+  }
+
+
+  .education-research__detail-factors {
+    grid-column: 2;
+
+    padding:
+      25px
+      0
+      0;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      var(--color-line);
+  }
+
+
+  .education-research__detail-close {
+    grid-column: 2;
+  }
+
+}
+
+
+/* =========================================
+   TABLET SMALL
+========================================= */
+
+@media (max-width: 900px) {
+
+  .education-hero {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .education-hero__visual {
+    min-height: 460px;
+  }
+
+
+  .education-topics__grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+
+  .education-topic-link {
+    border-bottom:
+      1px solid
+      var(--color-line);
+  }
+
+
+  .education-research__row {
+    grid-template-columns:
+      90px
+      1fr
+      1fr;
+  }
+
+
+  .education-research__image {
+    height: 260px;
+  }
+
+
+  .education-research__idea {
+    grid-column:
+      2 / -1;
+
+    min-height: auto;
+
+    padding:
+      25px
+      0
+      5px;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      var(--color-line);
+  }
+
+
+  .education-more {
+    margin-top: 20px;
+  }
+
+
+  /* CTA */
+
+  .education-cta {
+    grid-template-columns:
+      1fr
+      1fr;
+  }
+
+
+  .education-cta__button {
+    grid-column: 2;
+
+    width: 200px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* HERO */
+
+  .education-hero__copy {
+    padding:
+      60px
+      var(--page-padding);
+  }
+
+
+  .education-hero__copy h1 {
+    font-size:
+      clamp(
+        3.4rem,
+        15vw,
+        5rem
+      );
+  }
+
+
+  .education-hero__visual {
+    min-height: 320px;
+  }
+
+
+  /* TOPICS */
+
+  .education-topics {
+    padding:
+      0
+      var(--page-padding);
+  }
+
+
+  .education-topics__grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .education-topic-link {
+    padding:
+      20px
+      10px;
+  }
+
+
+  /* RESEARCH */
+
+  .education-research__row {
+    padding:
+      45px
+      var(--page-padding);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 22px;
+  }
+
+
+  .education-research__number {
+    font-size: 3rem;
+  }
+
+
+  .education-research__copy h2 {
+    margin-bottom: 15px;
+  }
+
+
+  .education-research__copy p {
+    max-width: 100%;
+  }
+
+
+  .education-research__sketch {
+    display: flex;
+
+    height: 200px;
+  }
+
+
+  .education-research__image {
+    height: auto;
+
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .education-research__idea {
+    min-height: auto;
+
+    padding:
+      25px
+      0
+      0;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      var(--color-line);
+  }
+
+
+  .education-more {
+    margin-top: 25px;
+  }
+
+
+  /* ACCORDION */
+
+  .education-research__detail-inner {
+    padding:
+      35px
+      var(--page-padding)
+      40px;
+
+    grid-template-columns:
+      1fr;
+
+    gap: 25px;
+  }
+
+
+  .education-research__detail-title h3 {
+    max-width: 100%;
+
+    font-size: 2.2rem;
+  }
+
+
+  .education-research__detail-copy {
+    max-width: 100%;
+  }
+
+
+  .education-research__detail-factors {
+    grid-column: auto;
+
+    padding:
+      25px
+      0
+      0;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      var(--color-line);
+  }
+
+
+  .education-research__detail-close {
+    grid-column: auto;
+
+    margin-top: 5px;
+  }
+
+
+  /* CTA */
+
+  .education-cta {
+    min-height: 520px;
+
+    padding:
+      40px
+      var(--page-padding);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items:
+      flex-start;
+
+    justify-content:
+      flex-start;
+
+    gap: 22px;
+
+    background-size:
+      auto 100%;
+
+    background-position:
+      64% bottom;
+  }
+
+
+  .education-cta::before {
+    background:
+      linear-gradient(
+        180deg,
+
+        rgba(
+          243,
+          241,
+          235,
+          0.95
+        )
+        0%,
+
+        rgba(
+          243,
+          241,
+          235,
+          0.88
+        )
+        35%,
+
+        rgba(
+          243,
+          241,
+          235,
+          0.4
+        )
+        60%,
+
+        rgba(
+          243,
+          241,
+          235,
+          0.04
+        )
+        100%
+      );
+  }
+
+
+  .education-cta h2 {
+    font-size:
+      clamp(
+        2.5rem,
+        11vw,
+        3.5rem
+      );
+  }
+
+
+  .education-cta p {
+    max-width: 300px;
+
+    padding:
+      10px
+      0;
+
+    background:
+      transparent;
+
+    backdrop-filter:
+      none;
+
+    -webkit-backdrop-filter:
+      none;
+  }
+
+
+  .education-cta__button {
+    width: 200px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .education-hero__copy h1 {
+    font-size: 3.15rem;
+  }
+
+
+  .education-topic-link > span {
+    font-size: 1.35rem;
+  }
+
+
+  .education-research__detail-title h3 {
+    font-size: 2rem;
+  }
+
+
+  .education-cta {
+    min-height: 500px;
+
+    background-position:
+      66% bottom;
+  }
+
+
+  .education-cta h2 {
+    font-size: 2.55rem;
+  }
+
+
+  .education-cta__button {
+    width: 190px;
+  }
+
+}

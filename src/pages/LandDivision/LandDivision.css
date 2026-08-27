@@ -1,0 +1,1574 @@
+/* =========================================================
+   LAND DIVISION PAGE
+========================================================= */
+
+.land-division-page {
+    min-height: 100vh;
+    background: #f3f1eb;
+    color: #2f2f2c;
+  }
+  
+  
+  /* =========================================================
+     SHARED
+  ========================================================= */
+  
+  .land-division-eyebrow {
+    display: block;
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  
+  .land-division-small-line {
+    width: 32px;
+    height: 1px;
+  
+    margin: 18px 0;
+  
+    background: rgba(47, 47, 44, 0.55);
+  }
+  
+  .land-division-section-heading {
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: flex-start;
+  
+    margin-bottom: 28px;
+  }
+  
+  .land-division-section-heading span {
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  
+  
+  /* =========================================================
+     HERO
+  ========================================================= */
+  
+  .land-division-hero {
+    display: grid;
+  
+    grid-template-columns:
+      35%
+      65%;
+  
+    min-height: 590px;
+  
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  
+  /* HERO COPY */
+  
+  .land-division-hero__copy {
+    padding:
+      52px
+      42px
+      44px
+      var(--page-padding);
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  }
+  
+  .land-division-hero__copy h1 {
+    margin: 0;
+  
+    font-family: var(--font-serif);
+  
+    font-size:
+      clamp(3.9rem, 5vw, 6.4rem);
+  
+    font-weight: 400;
+  
+    line-height: 0.92;
+  
+    letter-spacing: -0.045em;
+  }
+  
+  .land-division-hero__description {
+    max-width: 350px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.74);
+  
+    font-size: 0.8rem;
+  
+    line-height: 1.8;
+  }
+  
+  
+  /* =========================================================
+     BENEFITS
+  ========================================================= */
+  
+  .land-division-benefits {
+    margin-top: 50px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+  
+  .land-division-benefit {
+    min-height: 100px;
+  
+    padding:
+      0
+      22px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  
+    gap: 14px;
+  
+    border-left:
+      1px solid rgba(47, 47, 44, 0.15);
+  }
+  
+  .land-division-benefit:first-child {
+    padding-left: 0;
+  
+    border-left: 0;
+  }
+  
+  .land-division-benefit svg {
+    width: 29px;
+    height: 29px;
+  }
+  
+  .land-division-benefit span {
+    max-width: 120px;
+  
+    font-size: 0.72rem;
+  
+    line-height: 1.45;
+  }
+  
+  
+  /* =========================================================
+     HERO VISUAL
+  ========================================================= */
+  
+  .land-division-hero__visual {
+    position: relative;
+  
+    min-width: 0;
+  
+    overflow: hidden;
+  }
+  
+  .land-division-hero__visual > img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    object-position: center;
+  }
+  
+  
+  /* =========================================================
+     FLOATING HERO CTA
+  ========================================================= */
+  
+  .land-division-hero__cta {
+    position: absolute;
+  
+    top: 68px;
+    right: 0;
+  
+    width:
+      min(39%, 420px);
+  
+    padding:
+      32px
+      30px;
+  
+    background:
+      rgba(55, 61, 43, 0.93);
+  
+    backdrop-filter:
+      blur(4px);
+  
+    color:
+      #f3f1eb;
+  }
+  
+  .land-division-hero__cta p {
+    margin: 0;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.35rem;
+  
+    line-height: 1.35;
+  }
+  
+  .land-division-hero__cta-line {
+    width: 100%;
+  
+    height: 1px;
+  
+    margin:
+      26px
+      0
+      20px;
+  
+    background:
+      rgba(243, 241, 235, 0.3);
+  }
+  
+  .land-division-hero__cta a {
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 24px;
+  
+    color: inherit;
+  
+    text-decoration: none;
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.13em;
+  }
+  
+  .land-division-hero__cta svg {
+    width: 17px;
+    height: 17px;
+  
+    transition:
+      transform 180ms ease;
+  }
+  
+  .land-division-hero__cta a:hover svg {
+    transform:
+      translateX(4px);
+  }
+  
+  
+  /* =========================================================
+     WHAT IT INVOLVES
+  ========================================================= */
+  
+  .land-division-implications {
+    padding:
+      48px
+      var(--page-padding)
+      54px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      24%
+      76%;
+  
+    gap: 30px;
+  
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  
+  /* COPY */
+  
+  .land-division-implications__copy {
+    padding-right:
+      28px;
+  
+    border-right:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-implications__copy h2 {
+    margin:
+      0
+      0
+      24px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(2.4rem, 3vw, 3.8rem);
+  
+    font-weight: 400;
+  
+    line-height: 1;
+  
+    letter-spacing: -0.03em;
+  }
+  
+  .land-division-implications__copy p {
+    max-width: 330px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.72);
+  
+    font-size: 0.76rem;
+  
+    line-height: 1.75;
+  }
+  
+  
+  /* =========================================================
+     IMPLICATIONS GRID
+  ========================================================= */
+  
+  .land-division-implications__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(5, 1fr);
+  }
+  
+  .land-division-implication {
+    min-height: 190px;
+  
+    padding:
+      16px
+      24px;
+  
+    border-left:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-implication:first-child {
+    border-left: 0;
+  }
+  
+  .land-division-implication svg {
+    width: 30px;
+    height: 30px;
+  
+    margin-bottom: 24px;
+  }
+  
+  .land-division-implication h3 {
+    margin:
+      0
+      0
+      12px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.1rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.15;
+  }
+  
+  .land-division-implication p {
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.66rem;
+  
+    line-height: 1.65;
+  }
+  
+  
+  /* =========================================================
+     PROCESS
+  ========================================================= */
+  
+  .land-division-process {
+    padding:
+      36px
+      var(--page-padding)
+      52px;
+  
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-process__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(5, 1fr);
+  
+    border-top:
+      1px solid rgba(47, 47, 44, 0.13);
+  }
+  
+  .land-division-process__step {
+    position: relative;
+  
+    min-height: 170px;
+  
+    padding:
+      24px
+      36px
+      14px
+      0;
+  }
+  
+  .land-division-process__number {
+    display: block;
+  
+    margin-bottom: 8px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 2rem;
+  
+    line-height: 1;
+  }
+  
+  .land-division-process__step h3 {
+    max-width: 170px;
+  
+    margin:
+      0
+      0
+      12px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.15rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.05;
+  }
+  
+  .land-division-process__step p {
+    max-width: 180px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.65rem;
+  
+    line-height: 1.6;
+  }
+  
+  .land-division-process__arrow {
+    position: absolute;
+  
+    top: 61px;
+    right: 18px;
+  
+    width: 18px;
+    height: 18px;
+  }
+  
+  
+  /* =========================================================
+     DIVISION TYPES
+  ========================================================= */
+  
+  .land-division-types {
+    padding:
+      38px
+      var(--page-padding)
+      58px;
+  
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-types__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(4, 1fr);
+  
+    gap: 18px;
+  }
+  
+  
+  /* =========================================================
+     CARD
+  ========================================================= */
+  
+  .land-division-card {
+    position: relative;
+  
+    min-width: 0;
+  
+    border:
+      1px solid rgba(47, 47, 44, 0.12);
+  
+    background:
+      #f3f1eb;
+  
+    overflow: visible;
+  
+    transition:
+      border-color 180ms ease,
+      background 180ms ease;
+  }
+  
+  .land-division-card--active {
+    border-color:
+      rgba(47, 47, 44, 0.3);
+  
+    background:
+      rgba(255, 255, 255, 0.15);
+  }
+  
+  
+  /* =========================================================
+     CARD IMAGE
+  ========================================================= */
+  
+  .land-division-card__image {
+    position: relative;
+  
+    aspect-ratio:
+      1.38 / 1;
+  
+    background:
+      #e5e2da;
+  }
+  
+  .land-division-card__image-wrapper {
+    width: 100%;
+    height: 100%;
+  
+    overflow: hidden;
+  }
+  
+  .land-division-card__image-wrapper img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    object-position: center;
+  
+    transition:
+      transform 400ms ease;
+  }
+  
+  .land-division-card:hover
+  .land-division-card__image-wrapper img {
+    transform:
+      scale(1.025);
+  }
+  
+  
+  /* =========================================================
+     CARD ICON
+  ========================================================= */
+  
+  .land-division-card__icon {
+    position: absolute;
+  
+    left: 18px;
+    bottom: -23px;
+  
+    width: 46px;
+    height: 46px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    border:
+      1px solid rgba(47, 47, 44, 0.3);
+  
+    border-radius:
+      50%;
+  
+    background:
+      #f3f1eb;
+  
+    z-index: 10;
+  
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
+  }
+  
+  .land-division-card--active
+  .land-division-card__icon {
+    border-color:
+      rgba(47, 47, 44, 0.5);
+  }
+  
+  .land-division-card__icon svg {
+    width: 21px;
+    height: 21px;
+  
+    display: block;
+  }
+  
+  
+  /* =========================================================
+     CARD CONTENT
+  ========================================================= */
+  
+  .land-division-card__content {
+    padding:
+      40px
+      18px
+      22px;
+  }
+  
+  .land-division-card__content h3 {
+    margin:
+      0
+      0
+      12px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.3rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.05;
+  }
+  
+  .land-division-card__content p {
+    min-height: 52px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.66rem;
+  
+    line-height: 1.6;
+  }
+  
+  
+  /* =========================================================
+     VER MÁS BUTTON
+  ========================================================= */
+  
+  .land-division-card__more {
+    width: fit-content;
+  
+    margin-top: 20px;
+  
+    padding: 0;
+  
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 12px;
+  
+    border: 0;
+  
+    background: transparent;
+  
+    color: inherit;
+  
+    font-family: inherit;
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.12em;
+  
+    cursor: pointer;
+  
+    transition:
+      opacity 180ms ease;
+  }
+  
+  .land-division-card__more:hover {
+    opacity: 0.55;
+  }
+  
+  .land-division-card__more svg {
+    width: 15px;
+    height: 15px;
+  
+    transition:
+      transform 180ms ease;
+  }
+  
+  .land-division-card__more:hover svg {
+    transform:
+      translateX(3px);
+  }
+  
+  .land-division-card--active
+  .land-division-card__more:hover svg {
+    transform:
+      translateY(-2px);
+  }
+  
+  
+  /* =========================================================
+     EXPANDED DETAIL
+  ========================================================= */
+  
+  .land-division-detail {
+    position: relative;
+  
+    margin-top: 18px;
+  
+    padding:
+      38px
+      20px
+      38px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      28%
+      38%
+      26%
+      8%;
+  
+    align-items: start;
+  
+    gap: 0;
+  
+    border-top:
+      1px solid rgba(47, 47, 44, 0.16);
+  
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.16);
+  
+    background:
+      rgba(255, 255, 255, 0.1);
+  
+    animation:
+      landDivisionDetailIn
+      260ms
+      ease
+      both;
+  }
+  
+  
+  /* =========================================================
+     EXPANDED — TITLE
+  ========================================================= */
+  
+  .land-division-detail__title {
+    padding:
+      4px
+      42px
+      4px
+      0;
+  }
+  
+  .land-division-detail__number {
+    display: block;
+  
+    margin-bottom: 18px;
+  
+    font-size: 0.65rem;
+  
+    letter-spacing:
+      0.08em;
+  }
+  
+  .land-division-detail__title h3 {
+    max-width: 260px;
+  
+    margin: 0;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(2rem, 2.5vw, 3rem);
+  
+    font-weight: 400;
+  
+    line-height: 1.02;
+  
+    letter-spacing:
+      -0.025em;
+  }
+  
+  
+  /* =========================================================
+     EXPANDED — DESCRIPTION
+  ========================================================= */
+  
+  .land-division-detail__description {
+    min-height: 160px;
+  
+    padding:
+      4px
+      44px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: space-between;
+  
+    border-left:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-detail__description p {
+    max-width: 490px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.72);
+  
+    font-size: 0.74rem;
+  
+    line-height: 1.8;
+  }
+  
+  
+  /* CONTACT */
+  
+  .land-division-detail__contact {
+    width: fit-content;
+  
+    margin-top: 32px;
+  
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 14px;
+  
+    color: inherit;
+  
+    text-decoration: none;
+  
+    font-size: 0.57rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.12em;
+  
+    transition:
+      opacity 180ms ease;
+  }
+  
+  .land-division-detail__contact:hover {
+    opacity: 0.55;
+  }
+  
+  .land-division-detail__contact svg {
+    width: 15px;
+    height: 15px;
+  
+    transition:
+      transform 180ms ease;
+  }
+  
+  .land-division-detail__contact:hover svg {
+    transform:
+      translateX(4px);
+  }
+  
+  
+  /* =========================================================
+     EXPANDED — CONSIDERATIONS
+  ========================================================= */
+  
+  .land-division-detail__considerations {
+    min-height: 160px;
+  
+    padding:
+      4px
+      36px;
+  
+    border-left:
+      1px solid rgba(47, 47, 44, 0.14);
+  }
+  
+  .land-division-detail__considerations > span {
+    display: block;
+  
+    margin-bottom: 20px;
+  
+    font-size: 0.56rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.13em;
+  }
+  
+  .land-division-detail__considerations ul {
+    margin: 0;
+  
+    padding-left: 15px;
+  }
+  
+  .land-division-detail__considerations li {
+    margin-bottom: 9px;
+  
+    color:
+      rgba(47, 47, 44, 0.72);
+  
+    font-size: 0.68rem;
+  
+    line-height: 1.5;
+  }
+  
+  
+  /* =========================================================
+     EXPANDED — CLOSE
+  ========================================================= */
+  
+  .land-division-detail__close {
+    justify-self: end;
+  
+    padding:
+      4px
+      0;
+  
+    display: inline-flex;
+  
+    align-items: center;
+  
+    gap: 12px;
+  
+    border: 0;
+  
+    background: transparent;
+  
+    color: inherit;
+  
+    font-family: inherit;
+  
+    font-size: 0.56rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.12em;
+  
+    cursor: pointer;
+  
+    transition:
+      opacity 180ms ease;
+  }
+  
+  .land-division-detail__close:hover {
+    opacity: 0.55;
+  }
+  
+  .land-division-detail__close svg {
+    width: 15px;
+    height: 15px;
+  
+    transition:
+      transform 180ms ease;
+  }
+  
+  .land-division-detail__close:hover svg {
+    transform:
+      translateY(-3px);
+  }
+  
+  
+  /* =========================================================
+     EXPANDED ANIMATION
+  ========================================================= */
+  
+  @keyframes landDivisionDetailIn {
+  
+    from {
+      opacity: 0;
+  
+      transform:
+        translateY(-8px);
+    }
+  
+    to {
+      opacity: 1;
+  
+      transform:
+        translateY(0);
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     CTA
+  ========================================================= */
+  
+  .land-division-cta {
+    min-height: 165px;
+  
+    padding:
+      30px
+      var(--page-padding);
+  
+    display: grid;
+  
+    grid-template-columns:
+      115px
+      1.1fr
+      1px
+      0.8fr
+      auto;
+  
+    align-items: center;
+  
+    gap: 34px;
+  
+    background:
+      linear-gradient(
+        90deg,
+        #ebe7df,
+        #f3f1eb
+      );
+  }
+  
+  .land-division-cta__illustration {
+    display: grid;
+  
+    place-items: center;
+  }
+  
+  .land-division-cta__illustration svg {
+    width: 65px;
+    height: 65px;
+  
+    color:
+      rgba(47, 47, 44, 0.42);
+  }
+  
+  .land-division-cta h2 {
+    margin: 0;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(2.4rem, 3vw, 3.8rem);
+  
+    font-weight: 400;
+  
+    line-height: 0.98;
+  
+    letter-spacing:
+      -0.03em;
+  }
+  
+  .land-division-cta__divider {
+    width: 1px;
+    height: 66px;
+  
+    background:
+      rgba(47, 47, 44, 0.16);
+  }
+  
+  .land-division-cta p {
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.68);
+  
+    font-size: 0.68rem;
+  
+    line-height: 1.65;
+  }
+  
+  .land-division-cta__button {
+    min-width: 205px;
+  
+    padding:
+      16px
+      18px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    border:
+      1px solid rgba(47, 47, 44, 0.42);
+  
+    background:
+      rgba(243, 241, 235, 0.72);
+  
+    color: inherit;
+  
+    text-decoration: none;
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.13em;
+  
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
+  }
+  
+  .land-division-cta__button:hover {
+    background:
+      rgba(255, 255, 255, 0.58);
+  
+    border-color:
+      rgba(47, 47, 44, 0.8);
+  }
+  
+  .land-division-cta__button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  
+  /* =========================================================
+     TABLET — 1100
+  ========================================================= */
+  
+  @media (max-width: 1100px) {
+  
+    .land-division-hero {
+      grid-template-columns:
+        40%
+        60%;
+    }
+  
+    .land-division-hero__cta {
+      width: 52%;
+    }
+  
+    .land-division-implications {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-implications__copy {
+      padding-right: 0;
+  
+      padding-bottom: 34px;
+  
+      border-right: 0;
+  
+      border-bottom:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+    .land-division-implications__grid {
+      grid-template-columns:
+        repeat(3, 1fr);
+  
+      row-gap: 25px;
+    }
+  
+    .land-division-implication:nth-child(4) {
+      border-left: 0;
+    }
+  
+    .land-division-process__grid {
+      grid-template-columns:
+        repeat(3, 1fr);
+  
+      row-gap: 30px;
+    }
+  
+    .land-division-types__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+  
+  
+    /* EXPANDED */
+  
+    .land-division-detail {
+      grid-template-columns:
+        30%
+        42%
+        28%;
+  
+      padding:
+        36px
+        0;
+    }
+  
+    .land-division-detail__close {
+      position: absolute;
+  
+      top: 24px;
+      right: 0;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     SMALL TABLET — 820
+  ========================================================= */
+  
+  @media (max-width: 820px) {
+  
+    .land-division-hero {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-hero__copy {
+      padding:
+        55px
+        var(--page-padding);
+    }
+  
+    .land-division-hero__visual {
+      min-height: 500px;
+    }
+  
+    .land-division-hero__cta {
+      top: auto;
+  
+      bottom: 0;
+  
+      width:
+        min(80%, 420px);
+    }
+  
+    .land-division-implications__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+  
+    .land-division-implication:nth-child(3),
+    .land-division-implication:nth-child(5) {
+      border-left: 0;
+    }
+  
+    .land-division-process__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+  
+  
+    /* EXPANDED */
+  
+    .land-division-detail {
+      grid-template-columns:
+        1fr
+        1fr;
+  
+      gap:
+        34px
+        0;
+  
+      padding:
+        38px
+        0;
+    }
+  
+    .land-division-detail__title {
+      padding-right:
+        32px;
+    }
+  
+    .land-division-detail__description {
+      padding:
+        4px
+        0
+        4px
+        32px;
+    }
+  
+    .land-division-detail__considerations {
+      grid-column:
+        1 / -1;
+  
+      padding:
+        30px
+        0
+        0;
+  
+      border-left: 0;
+  
+      border-top:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+    .land-division-detail__close {
+      position: absolute;
+  
+      top: 18px;
+      right: 0;
+    }
+  
+  
+    /* CTA */
+  
+    .land-division-cta {
+      grid-template-columns:
+        1fr;
+  
+      align-items: start;
+    }
+  
+    .land-division-cta__illustration {
+      justify-content: start;
+    }
+  
+    .land-division-cta__button {
+      width: fit-content;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     MOBILE — 620
+  ========================================================= */
+  
+  @media (max-width: 620px) {
+  
+    .land-division-hero__copy h1 {
+      font-size:
+        clamp(
+          3.4rem,
+          15vw,
+          4.9rem
+        );
+    }
+  
+  
+    /* BENEFITS */
+  
+    .land-division-benefits {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-benefit,
+    .land-division-benefit:first-child {
+      min-height: auto;
+  
+      padding:
+        18px
+        0;
+  
+      border-left: 0;
+  
+      border-bottom:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+  
+    /* HERO */
+  
+    .land-division-hero__visual {
+      min-height: 460px;
+    }
+  
+    .land-division-hero__cta {
+      position: static;
+  
+      width: 100%;
+    }
+  
+  
+    /* IMPLICATIONS */
+  
+    .land-division-implications {
+      padding:
+        42px
+        var(--page-padding);
+    }
+  
+    .land-division-implications__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-implication,
+    .land-division-implication:nth-child(3),
+    .land-division-implication:nth-child(4),
+    .land-division-implication:nth-child(5) {
+      min-height: auto;
+  
+      padding:
+        24px
+        0;
+  
+      border-left: 0;
+  
+      border-bottom:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+  
+    /* PROCESS */
+  
+    .land-division-process {
+      padding:
+        34px
+        var(--page-padding);
+    }
+  
+    .land-division-process__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-process__step {
+      min-height: auto;
+  
+      padding:
+        24px
+        40px
+        24px
+        0;
+  
+      border-bottom:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+    .land-division-process__arrow {
+      top: 50%;
+      right: 0;
+    }
+  
+  
+    /* DIVISION TYPES */
+  
+    .land-division-types {
+      padding:
+        38px
+        var(--page-padding);
+    }
+  
+    .land-division-types__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .land-division-card__content p {
+      min-height: auto;
+    }
+  
+  
+    /* EXPANDED PANEL */
+  
+    .land-division-detail {
+      margin-top: 14px;
+  
+      padding:
+        34px
+        0;
+  
+      grid-template-columns:
+        1fr;
+  
+      gap: 0;
+    }
+  
+    .land-division-detail__title {
+      padding:
+        0
+        42px
+        28px
+        0;
+    }
+  
+    .land-division-detail__number {
+      margin-bottom:
+        12px;
+    }
+  
+    .land-division-detail__title h3 {
+      max-width:
+        300px;
+  
+      font-size:
+        2.2rem;
+    }
+  
+    .land-division-detail__description {
+      min-height: auto;
+  
+      padding:
+        28px
+        0;
+  
+      border-left: 0;
+  
+      border-top:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+    .land-division-detail__considerations {
+      min-height: auto;
+  
+      grid-column: auto;
+  
+      padding:
+        28px
+        0;
+  
+      border-left: 0;
+  
+      border-top:
+        1px solid rgba(47, 47, 44, 0.14);
+    }
+  
+    .land-division-detail__close {
+      position: absolute;
+  
+      top: 34px;
+      right: 0;
+    }
+  
+  
+    /* CTA */
+  
+    .land-division-cta {
+      padding:
+        38px
+        var(--page-padding);
+  
+      gap: 20px;
+    }
+  
+}

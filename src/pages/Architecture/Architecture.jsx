@@ -3,10 +3,14 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import "./Architecture.css";
 import {
-    Sun,
-    Leaf,
-    Brain,
-    Mountain,
+  Sun,
+  Leaf,
+  Brain,
+  Mountain,
+  AudioLines,
+  Layers,
+  PersonStanding,
+  Heart,
 } from "lucide-react";
 
 const features = [
@@ -243,38 +247,82 @@ export default function Architecture() {
       {/* EDUCACIÓN */}
 
       <section className="architecture__education">
-        <div className="architecture__education-copy">
-          <span className="architecture__eyebrow">
-            Línea de investigación
-          </span>
+  <div className="architecture__education-copy">
+    <span className="architecture__eyebrow">
+      Línea de investigación
+    </span>
 
-          <h2>
-            Arquitectura
-            <br />
-            + Educación
-          </h2>
+    <h2>
+      Arquitectura
+      <br />
+      + Educación
+    </h2>
 
-          <p>
-            Una exploración sobre cómo los espacios educativos pueden
-            potenciar el aprendizaje, el bienestar y las relaciones.
-          </p>
+    <p>
+      Una exploración sobre cómo los espacios educativos pueden
+      potenciar el aprendizaje, el bienestar y las relaciones.
+    </p>
 
-          <Link
-            to="/arquitectura/educacion"
-            className="architecture__text-link"
-          >
-            Explorar investigación
-            <span>→</span>
-          </Link>
-        </div>
+    <Link
+      to="/arquitectura/educacion"
+      className="architecture__text-link"
+    >
+      Explorar investigación
+      <span>→</span>
+    </Link>
+  </div>
 
-        <div className="architecture__education-image">
-          <img
-            src="/images/architecture/education-sketch.jpeg"
-            alt="Estudios y croquis de arquitectura educacional"
-          />
-        </div>
-      </section>
+  <div className="architecture__education-content">
+    <div className="architecture__education-sketches">
+      <img
+        src="/images/architecture/education-plan.jpg"
+        alt="Planta conceptual de espacio educativo"
+      />
+
+      <img
+        src="/images/architecture/education-interior.jpg"
+        alt="Croquis interior de espacio educativo"
+      />
+
+      <img
+        src="/images/architecture/education-building.jpg"
+        alt="Croquis exterior de arquitectura educativa"
+      />
+    </div>
+
+    <div className="architecture__education-topics">
+      <div>
+        <Sun strokeWidth={1.2} />
+        <span>Luz natural</span>
+      </div>
+
+      <div>
+        <Leaf strokeWidth={1.2} />
+        <span>Naturaleza</span>
+      </div>
+
+      <div>
+        <AudioLines strokeWidth={1.2} />
+        <span>Acústica</span>
+      </div>
+
+      <div>
+        <Layers strokeWidth={1.2} />
+        <span>Materialidad</span>
+      </div>
+
+      <div>
+        <PersonStanding strokeWidth={1.2} />
+        <span>Escala</span>
+      </div>
+
+      <div>
+        <Heart strokeWidth={1.2} />
+        <span>Bienestar</span>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* PROYECTOS */}
 
@@ -325,20 +373,22 @@ export default function Architecture() {
       <section className="architecture__cta">
         <h2>
           ¿Tienes un proyecto
-          <br />
           en mente?
         </h2>
 
-        <p>
-          Cuéntanos sobre tu terreno, tus necesidades
-          <br />
-          y cómo imaginas habitarlo.
-        </p>
+          <p>
+            Cuéntanos sobre tu terreno, tus necesidades
+            <br />
+            y cómo imaginas habitarlo.
+            <br />
+            Te ayudamos a hacerlo realidad.
+          </p>
 
-        <Link to="/contacto" className="architecture__cta-button">
-          Conversemos
-          <span>→</span>
-        </Link>
+          <Link to="/contacto" className="architecture__cta-button">
+            Conversemos
+            <span>→</span>
+          </Link>
+          
       </section>
 
       <Footer />

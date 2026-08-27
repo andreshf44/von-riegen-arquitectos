@@ -1,0 +1,1046 @@
+/* =========================================================
+   REGULARIZATION PAGE
+========================================================= */
+
+.regularization-page {
+    min-height: 100vh;
+  
+    background: #f3f1eb;
+    color: #2f2f2c;
+  }
+  
+  
+  /* =========================================================
+     SHARED
+  ========================================================= */
+  
+  .regularization-eyebrow {
+    display: block;
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.14em;
+  }
+  
+  .regularization-small-line {
+    width: 32px;
+    height: 1px;
+  
+    margin:
+      18px
+      0;
+  
+    background:
+      rgba(47, 47, 44, 0.55);
+  }
+  
+  .regularization-section-heading {
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    margin-bottom: 34px;
+  }
+  
+  .regularization-section-heading--left {
+    align-items: flex-start;
+  }
+  
+  .regularization-section-heading span {
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.14em;
+  }
+  
+  
+  /* =========================================================
+     HERO
+  ========================================================= */
+  
+  .regularization-hero {
+    display: grid;
+  
+    grid-template-columns:
+      38%
+      62%;
+  
+    min-height: 590px;
+  
+    border-bottom:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  
+  /* HERO COPY */
+  
+  .regularization-hero__copy {
+    padding:
+      54px
+      48px
+      42px
+      var(--page-padding);
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  }
+  
+  .regularization-hero__copy h1 {
+    margin:
+      28px
+      0
+      0;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(
+        3.8rem,
+        4.8vw,
+        6rem
+      );
+  
+    font-weight: 400;
+  
+    line-height: 0.94;
+  
+    letter-spacing: -0.04em;
+  }
+  
+  .regularization-hero__description {
+    max-width: 390px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.74);
+  
+    font-size: 0.8rem;
+  
+    line-height: 1.82;
+  }
+  
+  
+  /* =========================================================
+     BENEFITS
+  ========================================================= */
+  
+  .regularization-benefits {
+    margin-top: 46px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+  
+  .regularization-benefit {
+    min-height: 95px;
+  
+    padding:
+      0
+      20px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  
+    gap: 12px;
+  
+    border-left:
+      1px solid
+      rgba(47, 47, 44, 0.15);
+  }
+  
+  .regularization-benefit:first-child {
+    padding-left: 0;
+  
+    border-left: 0;
+  }
+  
+  .regularization-benefit svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .regularization-benefit span {
+    max-width: 105px;
+  
+    font-size: 0.72rem;
+  
+    line-height: 1.45;
+  }
+  
+  
+  /* =========================================================
+     HERO VISUAL
+  ========================================================= */
+  
+  .regularization-hero__visual {
+    position: relative;
+  
+    min-width: 0;
+  
+    overflow: hidden;
+  }
+  
+  .regularization-hero__visual > img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    object-position: center;
+  }
+  
+  
+  /* HERO BANNER */
+  
+  .regularization-hero__banner {
+    position: absolute;
+  
+    right: 0;
+    bottom: 0;
+  
+    width: min(76%, 720px);
+  
+    min-height: 96px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      72px
+      1fr
+      1px
+      1fr
+      54px;
+  
+    align-items: center;
+  
+    background:
+      rgba(93, 94, 76, 0.88);
+  
+    backdrop-filter:
+      blur(4px);
+  
+    color: #f3f1eb;
+  }
+  
+  .regularization-hero__banner-icon {
+    height: 100%;
+  
+    display: grid;
+  
+    place-items: center;
+  }
+  
+  .regularization-hero__banner-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .regularization-hero__banner p {
+    margin: 0;
+  
+    padding:
+      0
+      24px;
+  
+    font-size: 0.68rem;
+  
+    line-height: 1.55;
+  }
+  
+  .regularization-hero__banner-divider {
+    width: 1px;
+    height: 54%;
+  
+    background:
+      rgba(243, 241, 235, 0.35);
+  }
+  
+  .regularization-hero__banner a {
+    width: 54px;
+    height: 100%;
+  
+    display: grid;
+  
+    place-items: center;
+  
+    color: inherit;
+  
+    transition:
+      background 180ms ease;
+  }
+  
+  .regularization-hero__banner a:hover {
+    background:
+      rgba(255, 255, 255, 0.08);
+  }
+  
+  .regularization-hero__banner a svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  
+  /* =========================================================
+     WHY
+  ========================================================= */
+  
+  .regularization-why {
+    display: grid;
+  
+    grid-template-columns:
+      34%
+      66%;
+  
+    border-bottom:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-why__copy {
+    padding:
+      56px
+      44px
+      56px
+      var(--page-padding);
+  
+    border-right:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-why__copy h2 {
+    max-width: 420px;
+  
+    margin:
+      0
+      0
+      26px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(
+        2.3rem,
+        3vw,
+        3.8rem
+      );
+  
+    font-weight: 400;
+  
+    line-height: 1;
+  
+    letter-spacing: -0.025em;
+  }
+  
+  .regularization-why__copy p {
+    max-width: 390px;
+  
+    margin:
+      0
+      0
+      17px;
+  
+    color:
+      rgba(47, 47, 44, 0.72);
+  
+    font-size: 0.76rem;
+  
+    line-height: 1.75;
+  }
+  
+  .regularization-why__visual {
+    min-height: 330px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    padding:
+      34px
+      48px;
+  
+    overflow: hidden;
+  }
+  
+  .regularization-why__visual img {
+    width: 100%;
+    height: 100%;
+  
+    max-height: 310px;
+  
+    display: block;
+  
+    object-fit: contain;
+  
+    mix-blend-mode: multiply;
+  }
+  
+  
+  /* =========================================================
+     SERVICES
+  ========================================================= */
+  
+  .regularization-services {
+    padding:
+      38px
+      var(--page-padding)
+      54px;
+  
+    border-bottom:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-services__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(4, 1fr);
+  }
+  
+  .regularization-service {
+    min-height: 170px;
+  
+    padding:
+      10px
+      28px;
+  
+    border-left:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-service:first-child {
+    padding-left: 0;
+  
+    border-left: 0;
+  }
+  
+  .regularization-service svg {
+    width: 28px;
+    height: 28px;
+  
+    margin-bottom: 20px;
+  }
+  
+  .regularization-service h3 {
+    margin:
+      0
+      0
+      12px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.3rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.05;
+  }
+  
+  .regularization-service p {
+    max-width: 220px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.68rem;
+  
+    line-height: 1.65;
+  }
+  
+  
+  /* =========================================================
+     PROCESS
+  ========================================================= */
+  
+  .regularization-process {
+    padding:
+      34px
+      var(--page-padding)
+      50px;
+  
+    border-bottom:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-process__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(5, 1fr);
+  
+    border-top:
+      1px solid
+      rgba(47, 47, 44, 0.13);
+  }
+  
+  .regularization-process__step {
+    position: relative;
+  
+    min-height: 180px;
+  
+    padding:
+      24px
+      30px
+      14px
+      0;
+  }
+  
+  .regularization-process__number {
+    display: block;
+  
+    margin-bottom: 8px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 2rem;
+  
+    line-height: 1;
+  }
+  
+  .regularization-process__step h3 {
+    max-width: 150px;
+  
+    margin:
+      0
+      0
+      12px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.15rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.05;
+  }
+  
+  .regularization-process__step p {
+    max-width: 175px;
+  
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.65rem;
+  
+    line-height: 1.6;
+  }
+  
+  .regularization-process__arrow {
+    position: absolute;
+  
+    right: 18px;
+    top: 62px;
+  
+    width: 17px;
+    height: 17px;
+  }
+  
+  
+  /* =========================================================
+     CASES
+  ========================================================= */
+  
+  .regularization-cases {
+    padding:
+      38px
+      var(--page-padding)
+      58px;
+  
+    border-bottom:
+      1px solid
+      rgba(47, 47, 44, 0.14);
+  }
+  
+  .regularization-cases__grid {
+    display: grid;
+  
+    grid-template-columns:
+      repeat(4, 1fr);
+  
+    gap: 30px;
+  }
+  
+  .regularization-case__image {
+    width: 100%;
+  
+    aspect-ratio:
+      1.55 / 1;
+  
+    overflow: hidden;
+  
+    background: #e5e2da;
+  }
+  
+  .regularization-case__image img {
+    width: 100%;
+    height: 100%;
+  
+    display: block;
+  
+    object-fit: cover;
+  
+    transition:
+      transform 400ms ease;
+  }
+  
+  .regularization-case:hover
+  .regularization-case__image img {
+    transform:
+      scale(1.015);
+  }
+  
+  .regularization-case h3 {
+    margin:
+      14px
+      0
+      8px;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size: 1.18rem;
+  
+    font-weight: 400;
+  
+    line-height: 1.05;
+  }
+  
+  .regularization-case p {
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.7);
+  
+    font-size: 0.66rem;
+  
+    line-height: 1.58;
+  }
+  
+  
+  /* =========================================================
+     CTA
+  ========================================================= */
+  
+  .regularization-cta {
+    min-height: 160px;
+  
+    padding:
+      28px
+      var(--page-padding);
+  
+    display: grid;
+  
+    grid-template-columns:
+      70px
+      1.15fr
+      1px
+      0.85fr
+      auto;
+  
+    align-items: center;
+  
+    gap:
+      34px;
+  
+    background:
+      linear-gradient(
+        90deg,
+        #ede9e1,
+        #f3f1eb
+      );
+  }
+  
+  .regularization-cta__illustration {
+    display: grid;
+  
+    place-items: center;
+  }
+  
+  .regularization-cta__illustration svg {
+    width: 38px;
+    height: 38px;
+  
+    color:
+      rgba(47, 47, 44, 0.5);
+  }
+  
+  .regularization-cta h2 {
+    margin: 0;
+  
+    font-family:
+      var(--font-serif);
+  
+    font-size:
+      clamp(
+        2rem,
+        2.7vw,
+        3.4rem
+      );
+  
+    font-weight: 400;
+  
+    line-height: 1;
+  
+    letter-spacing: -0.025em;
+  }
+  
+  .regularization-cta__divider {
+    width: 1px;
+    height: 65px;
+  
+    background:
+      rgba(47, 47, 44, 0.18);
+  }
+  
+  .regularization-cta p {
+    margin: 0;
+  
+    color:
+      rgba(47, 47, 44, 0.68);
+  
+    font-size: 0.68rem;
+  
+    line-height: 1.65;
+  }
+  
+  .regularization-cta__button {
+    min-width: 190px;
+  
+    padding:
+      16px
+      18px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  
+    gap: 30px;
+  
+    border:
+      1px solid
+      rgba(47, 47, 44, 0.42);
+  
+    color: inherit;
+  
+    background:
+      rgba(243, 241, 235, 0.72);
+  
+    font-size: 0.58rem;
+  
+    text-transform: uppercase;
+  
+    letter-spacing: 0.13em;
+  
+    transition:
+      background 180ms ease,
+      border-color 180ms ease;
+  }
+  
+  .regularization-cta__button:hover {
+    background:
+      rgba(255, 255, 255, 0.6);
+  
+    border-color:
+      rgba(47, 47, 44, 0.8);
+  }
+  
+  .regularization-cta__button svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  
+  /* =========================================================
+     TABLET
+  ========================================================= */
+  
+  @media (max-width: 1100px) {
+  
+    .regularization-hero {
+      grid-template-columns:
+        42%
+        58%;
+    }
+  
+    .regularization-hero__banner {
+      width: 88%;
+    }
+  
+    .regularization-services__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+  
+      row-gap: 30px;
+    }
+  
+    .regularization-service:nth-child(3) {
+      border-left: 0;
+  
+      padding-left: 0;
+    }
+  
+    .regularization-process__grid {
+      grid-template-columns:
+        repeat(3, 1fr);
+  
+      row-gap: 30px;
+    }
+  
+    .regularization-cases__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+  
+    .regularization-cta {
+      grid-template-columns:
+        60px
+        1fr
+        auto;
+  
+      gap: 24px;
+    }
+  
+    .regularization-cta__divider,
+    .regularization-cta p {
+      display: none;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     SMALL TABLET
+  ========================================================= */
+  
+  @media (max-width: 820px) {
+  
+    .regularization-hero {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .regularization-hero__copy {
+      padding:
+        55px
+        var(--page-padding);
+    }
+  
+    .regularization-hero__visual {
+      min-height: 460px;
+    }
+  
+    .regularization-hero__banner {
+      width: 100%;
+    }
+  
+    .regularization-why {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .regularization-why__copy {
+      border-right: 0;
+  
+      border-bottom:
+        1px solid
+        rgba(47, 47, 44, 0.14);
+  
+      padding:
+        48px
+        var(--page-padding);
+    }
+  
+    .regularization-process__grid {
+      grid-template-columns:
+        repeat(2, 1fr);
+    }
+  
+    .regularization-cta {
+      grid-template-columns:
+        1fr;
+  
+      align-items: start;
+    }
+  
+    .regularization-cta__illustration {
+      justify-content: start;
+    }
+  
+    .regularization-cta__button {
+      width: fit-content;
+    }
+  
+  }
+  
+  
+  /* =========================================================
+     MOBILE
+  ========================================================= */
+  
+  @media (max-width: 620px) {
+  
+    .regularization-hero__copy h1 {
+      font-size:
+        clamp(
+          3.3rem,
+          14vw,
+          4.8rem
+        );
+    }
+  
+    .regularization-benefits {
+      grid-template-columns:
+        1fr;
+  
+      gap: 22px;
+    }
+  
+    .regularization-benefit,
+    .regularization-benefit:first-child {
+      min-height: auto;
+  
+      padding:
+        18px
+        0;
+  
+      border-left: 0;
+  
+      border-bottom:
+        1px solid
+        rgba(47, 47, 44, 0.14);
+    }
+  
+    .regularization-hero__visual {
+      min-height: 440px;
+    }
+  
+    .regularization-hero__banner {
+      position: static;
+  
+      grid-template-columns:
+        50px
+        1fr
+        40px;
+  
+      min-height: auto;
+  
+      padding:
+        16px
+        0;
+    }
+  
+    .regularization-hero__banner p:nth-of-type(2),
+    .regularization-hero__banner-divider {
+      display: none;
+    }
+  
+    .regularization-services {
+      padding:
+        38px
+        var(--page-padding);
+    }
+  
+    .regularization-services__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .regularization-service,
+    .regularization-service:first-child,
+    .regularization-service:nth-child(3) {
+      min-height: auto;
+  
+      padding:
+        26px
+        0;
+  
+      border-left: 0;
+  
+      border-bottom:
+        1px solid
+        rgba(47, 47, 44, 0.14);
+    }
+  
+    .regularization-process {
+      padding:
+        34px
+        var(--page-padding);
+    }
+  
+    .regularization-process__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .regularization-process__step {
+      min-height: auto;
+  
+      padding:
+        24px
+        40px
+        24px
+        0;
+  
+      border-bottom:
+        1px solid
+        rgba(47, 47, 44, 0.14);
+    }
+  
+    .regularization-process__arrow {
+      right: 0;
+      top: 50%;
+    }
+  
+    .regularization-cases {
+      padding:
+        38px
+        var(--page-padding);
+    }
+  
+    .regularization-cases__grid {
+      grid-template-columns:
+        1fr;
+    }
+  
+    .regularization-cta {
+      padding:
+        38px
+        var(--page-padding);
+  
+      gap: 20px;
+    }
+  
+  }

@@ -1,0 +1,510 @@
+/* =========================================================
+   ARCHITECTURE PROJECT DETAIL
+========================================================= */
+
+.project-detail-page {
+    background: #f3f1eb;
+    color: #2f2f2c;
+  }
+  
+  /* HERO */
+  
+  .project-detail__hero {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 720px;
+    border-bottom: 1px solid rgba(47, 47, 44, 0.16);
+  }
+  
+  .project-detail__sidebar {
+    padding: 48px 42px 40px;
+    border-right: 1px solid rgba(47, 47, 44, 0.16);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-detail__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .project-detail__counter {
+    margin-top: 38px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+  
+  .project-detail__sidebar h1 {
+    margin: 18px 0 12px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(46px, 4vw, 68px);
+    font-weight: 400;
+    line-height: 1.02;
+  }
+  
+  .project-detail__small-line {
+    width: 34px;
+    height: 1px;
+    background: rgba(47, 47, 44, 0.5);
+    margin: 18px 0;
+  }
+  
+  .project-detail__sidebar h2 {
+    margin: 0 0 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .project-detail__description {
+    max-width: 310px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(47, 47, 44, 0.72);
+  }
+  
+  .project-detail__technical {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    row-gap: 14px;
+    font-size: 12px;
+  }
+  
+  .project-detail__technical dt {
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-size: 9px;
+    color: rgba(47, 47, 44, 0.65);
+  }
+  
+  .project-detail__technical dd {
+    margin: 0;
+    color: rgba(47, 47, 44, 0.82);
+  }
+  
+  .project-detail__share {
+    margin-top: auto;
+    padding-top: 38px;
+    border: 0;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  /* HERO IMAGE */
+  
+  .project-detail__visual {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-detail__main-image {
+    flex: 1;
+    max-height: 715px;
+    overflow: hidden;
+  }
+  
+  .project-detail__main-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* THUMBNAILS */
+  
+  .project-detail__thumbs {
+    min-height: 112px;
+    padding: 16px 28px;
+    border-top: 1px solid rgba(47, 47, 44, 0.16);
+    display: grid;
+    grid-template-columns: 34px 1fr 34px;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .project-detail__thumb-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  .project-detail__thumb-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .project-detail__thumb {
+    flex: 0 0 92px;
+    height: 64px;
+    padding: 0;
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .project-detail__thumb--active {
+    border-color: rgba(47, 47, 44, 0.45);
+    opacity: 1;
+  }
+  
+  .project-detail__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .project-detail__thumb-arrow {
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  /* EL PROYECTO */
+  
+  .project-detail__concept {
+    padding: 62px 42px;
+    border-bottom: 1px solid rgba(47, 47, 44, 0.16);
+    display: grid;
+    grid-template-columns: 28% 42% 30%;
+  }
+  
+  .project-detail__eyebrow {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  
+  .project-detail__concept-copy h2 {
+    margin: 12px 0 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 400;
+  }
+  
+  .project-detail__concept-copy p {
+    max-width: 360px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(47, 47, 44, 0.72);
+  }
+  
+  .project-detail__principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  
+  .project-detail__principles article {
+    padding: 10px 22px;
+    border-left: 1px solid rgba(47, 47, 44, 0.16);
+  }
+  
+  .project-detail__principles svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .project-detail__principles h3 {
+    margin: 0 0 12px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .project-detail__principles p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(47, 47, 44, 0.7);
+  }
+  
+  .project-detail__concept-sketch img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  /* LA CASA */
+  
+  .project-detail__house,
+  .project-detail__plans,
+  .project-detail__materials {
+    padding: 58px 42px;
+    border-bottom: 1px solid rgba(47, 47, 44, 0.16);
+  }
+  
+  .project-detail__section-heading {
+    margin-bottom: 26px;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  
+  .project-detail__house-grid {
+    display: grid;
+    grid-template-columns: 30% 42% 28%;
+    gap: 12px;
+  }
+  
+  .project-detail__house-image {
+    overflow: hidden;
+  }
+  
+  .project-detail__house-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .project-detail__house-image--left,
+  .project-detail__house-image--main {
+    min-height: 390px;
+  }
+  
+  .project-detail__house-side {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  /* PLANOS */
+  
+  .project-detail__plans {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 28px;
+  }
+  
+  .project-detail__plans-copy p,
+  .project-detail__materials-copy p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(47, 47, 44, 0.7);
+  }
+  
+  .project-detail__plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  
+  .project-detail__plans-grid figure {
+    margin: 0;
+  }
+  
+  .project-detail__plan-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  
+  .project-detail__plan-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .project-detail__plans-grid figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(47, 47, 44, 0.7);
+  }
+  
+  /* MATERIALIDAD */
+  
+  .project-detail__materials {
+    display: grid;
+    grid-template-columns: 20% 58% 22%;
+    gap: 20px;
+  }
+  
+  .project-detail__materials-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  
+  .project-detail__material-image {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  
+  .project-detail__material-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-detail__materials-grid h3 {
+    margin: 10px 0 5px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  
+  .project-detail__materials-grid p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    color: rgba(47, 47, 44, 0.7);
+  }
+  
+  .project-detail__materials-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* NAVEGACIÓN */
+  
+  .project-detail__navigation {
+    min-height: 120px;
+    padding: 0 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid rgba(47, 47, 44, 0.16);
+  }
+  
+  .project-detail__navigation a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .project-detail__navigation-project {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .project-detail__navigation-project--next {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  
+  .project-detail__navigation-project span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(47, 47, 44, 0.65);
+  }
+  
+  .project-detail__navigation-project strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .project-detail__navigation-all {
+    justify-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  /* NOT FOUND */
+  
+  .project-detail__not-found {
+    min-height: 60vh;
+    padding: 90px 42px;
+  }
+  
+  .project-detail__not-found h1 {
+    margin: 24px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 400;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1100px) {
+    .project-detail__hero {
+      grid-template-columns: 36% 64%;
+    }
+  
+    .project-detail__concept {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-detail__materials {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .project-detail__hero {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-detail__sidebar {
+      border-right: 0;
+      border-bottom: 1px solid rgba(47, 47, 44, 0.16);
+    }
+  
+    .project-detail__main-image {
+      min-height: 440px;
+    }
+  
+    .project-detail__house-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-detail__house-side {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+  
+    .project-detail__plans {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-detail__plans-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-detail__materials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .project-detail__navigation {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding: 32px 42px;
+    }
+  
+    .project-detail__navigation-project--next {
+      justify-content: flex-start;
+      text-align: left;
+    }
+  
+    .project-detail__navigation-all {
+      justify-self: start;
+    }
+  }
