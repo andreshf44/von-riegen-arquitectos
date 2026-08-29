@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/Footer";
 import "./Home.css";
 
 const services = [
@@ -96,6 +97,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <Footer />
+
     </main>
   );
 }

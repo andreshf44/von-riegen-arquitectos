@@ -1,19 +1,16 @@
 import { Link, NavLink } from "react-router";
 import "./Navbar.css";
 
-export default function Navbar({ variant = "simple" }) {
-  const isFull = variant === "full";
+export default function Navbar() {
 
   return (
-    <header className={`navbar navbar--${variant}`}>
+    <header className="navbar navbar">
       <Link to="/" className="navbar__brand">
         <span>VON RIEGEN</span>
         <small>ARQUITECTOS</small>
       </Link>
 
       <nav className="navbar__nav">
-        {isFull ? (
-          <>
             <NavLink
               to="/arquitectura"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -55,17 +52,9 @@ export default function Navbar({ variant = "simple" }) {
             >
               Contacto
             </NavLink>
-          </>
-        ) : (
-          <>
-            <NavLink to="/estudio">Estudio</NavLink>
-            <span className="navbar__separator" />
-            <NavLink to="/contacto">Contacto</NavLink>
-          </>
-        )}
+      
       </nav>
-
-      {isFull && (
+      
         <button
           className="navbar__menu"
           type="button"
@@ -75,7 +64,6 @@ export default function Navbar({ variant = "simple" }) {
           <span />
           <span />
         </button>
-      )}
     </header>
   );
 }
