@@ -275,17 +275,17 @@ export default function Architecture() {
   <div className="architecture__education-content">
     <div className="architecture__education-sketches">
       <img
-        src="/images/architecture/education-plan.jpg"
+        src="/images/architecture/education-plan.png"
         alt="Planta conceptual de espacio educativo"
       />
 
       <img
-        src="/images/architecture/education-interior.jpg"
+        src="/images/architecture/education-interior.png"
         alt="Croquis interior de espacio educativo"
       />
 
       <img
-        src="/images/architecture/education-building.jpg"
+        src="/images/architecture/education-building.png"
         alt="Croquis exterior de arquitectura educativa"
       />
     </div>
