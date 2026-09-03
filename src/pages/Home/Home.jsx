@@ -1,4 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router";
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import "./Home.css";
@@ -30,7 +35,50 @@ const services = [
   },
 ];
 
+const opinions = [
+  {
+    number: "01",
+    commentary: "Nos acompañaron en todo el proceso con mucha claridad y cercanía. Entendieron lo que queriamos y lo transformaron en una casa que superó nuestras expectativas.",
+    title: "Familia Valdes",
+    subtitle: "Casa en Puerto Varas",
+    url: "/images/projects/casa-chucauco/1.JPG",
+  },
+  {
+    number: "02",
+    commentary:
+      "Desde el primer momento sentimos que nuestras ideas fueron escuchadas y llevadas a una propuesta que realmente representa nuestra forma de vivir.",
+    title: "Familia González",
+    subtitle: "Casa en Pucón",
+    url: "/images/projects/casa-chucauco/2.JPG",
+  },
+  {
+    number: "03",
+    commentary:
+      "El proceso fue claro, cercano y muy profesional. Nos sentimos acompañados en cada decisión hasta llegar al resultado final.",
+    title: "Familia Martínez",
+    subtitle: "Casa en Villarrica",
+    url: "/images/projects/casa-chucauco/3.JPG",
+  },
+];
+
 export default function Home() {
+
+  const [currentOpinion, setCurrentOpinion] = useState(0);
+
+  const opinion = opinions[currentOpinion];
+
+  const nextOpinion = () => {
+    setCurrentOpinion((current) =>
+      current === opinions.length - 1 ? 0 : current + 1
+    );
+  };
+
+  const previousOpinion = () => {
+    setCurrentOpinion((current) =>
+      current === 0 ? opinions.length - 1 : current - 1
+    );
+  };
+
   return (
     <main className="home">
       <Navbar />
@@ -95,6 +143,50 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="customers_opinion">
+
+        <div className="customers-opinion__quote">
+          <span className="customers-opinion__eyebrow">
+            LO QUE DICEN NUESTROS CLIENTES
+          </span>
+          <h2>"{opinion.commentary}"</h2>
+        </div>
+
+        <div className="customers-opinion__info">
+          <div className="customers-opinion__client">
+            <h3>{opinion.title}</h3>
+            <span>{opinion.subtitle}</span>
+          </div>
+
+          <div className="customers-opinion__navigation">
+            <p> {opinion.number} / {String(opinion.length).padStart(2, "0")}</p>
+            <div className="customers-opinion__arrows">
+              <button
+                type="button"
+                onClick={previousOpinion}
+                aria-label="Comentario anterior"
+              >
+                <ArrowLeft strokeWidth={1.1} />
+              </button>
+
+              <button
+                type="button"
+                onClick={nextOpinion}
+                aria-label="Comentario siguiente"
+              >
+                <ArrowRight strokeWidth={1.1} />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="customers-opinion__image">
+          <img
+            src={opinion.url}
+            alt={`Proyecto ${opinion.subtitle}`}
+          />
         </div>
       </section>
 

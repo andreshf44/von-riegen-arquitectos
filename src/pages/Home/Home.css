@@ -5,7 +5,7 @@
     grid-template-columns: minmax(300px, 0.8fr) minmax(450px, 1.2fr);
     gap: 8vw;
     align-items: center;
-  }
+}
   
   .home__intro-copy {
     max-width: 520px;
@@ -273,8 +273,241 @@
     text-transform: uppercase;
     letter-spacing: 0.18em;
   }
+
+  /* =========================================================
+   CUSTOMERS OPINION
+========================================================= */
+
+.customers_opinion {
+  display: grid;
+  grid-template-columns: 52% 20% 28%;
+
+  height: 400px;
+
+  background: #f3f1eb;
+
+  border-top:
+    1px solid rgba(47, 47, 44, 0.14);
+
+  border-bottom:
+    1px solid rgba(47, 47, 44, 0.14);
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.customers-opinion__quote {
+  padding:
+    54px
+    54px
+    48px
+    var(--page-padding);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.customers-opinion__eyebrow {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 0.58rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  color:
+    rgba(47, 47, 44, 0.72);
+}
+
+.customers-opinion__quote h2 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--font-serif);
+
+  font-size:
+    clamp(2rem, 2.8vw, 3.5rem);
+
+  font-weight: 400;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   CLIENT INFO
+========================================================= */
+
+.customers-opinion__info {
+  padding:
+    54px
+    34px
+    48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-left:
+    1px solid rgba(47, 47, 44, 0.14);
+}
+
+.customers-opinion__client h3 {
+  margin:
+    0
+    0
+    7px;
+
+  font-size: 0.62rem;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+}
+
+.customers-opinion__client span {
+  display: block;
+
+  color:
+    rgba(47, 47, 44, 0.66);
+
+  font-size: 0.67rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.customers-opinion__navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.customers-opinion__navigation p {
+  margin: 0;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.08em;
+
+  color:
+    rgba(47, 47, 44, 0.7);
+}
+
+.customers-opinion__arrows {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.customers-opinion__arrows button {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.customers-opinion__arrows button:hover {
+  opacity: 0.55;
+}
+
+.customers-opinion__arrows button:first-child:hover {
+  transform: translateX(-3px);
+}
+
+.customers-opinion__arrows button:last-child:hover {
+  transform: translateX(3px);
+}
+
+.customers-opinion__arrows svg {
+  width: 17px;
+  height: 17px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.customers-opinion__image {
+  min-width: 0;
+
+  overflow: hidden;
+
+  padding: 12px;
+}
+
+.customers-opinion__image img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 300px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  animation:
+    customerOpinionImageIn
+    380ms
+    ease
+    both;
+}
+
+
+/* =========================================================
+   IMAGE TRANSITION
+========================================================= */
+
+@keyframes customerOpinionImageIn {
+
+  from {
+    opacity: 0.4;
+    transform: scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
   
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
     .home__intro {
       grid-template-columns: 1fr;
     }
@@ -291,7 +524,7 @@
     .service-card__content {
       min-height: 420px;
     }
-  }
+}
   
 @media (max-width: 650px) {
   .home__intro {
