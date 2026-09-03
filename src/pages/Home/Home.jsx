@@ -106,7 +106,7 @@ export default function Home() {
 
         <div className="home__drawing" aria-hidden="true">
           <img
-            src="/public/images/home/architectural-sketch.png"
+            src="/images/home/architectural-sketch.png"
             alt=""
             className="home__drawing-image"
           />
