@@ -47,7 +47,7 @@ const opinions = [
     number: "02",
     commentary:"Con Daniela sentí que se logró una mezcla perfecta entre lo que yo tenía en mente y sus propuestas. En otras palabras supo leer al cliente y plasmar tanto en diseño, habitabilidad, luz y eficiencia energética un resultado equilibrado que me dejó muy satisfecho.",
     title: "Falta Nombre",
-    subtitle: "Falta Casa",
+    subtitle: "Casa en Los Riscos",
     url: "/images/home/opinions/opinion-02.png",
   },
   {
@@ -61,7 +61,7 @@ const opinions = [
     number: "04",
     commentary:"Para mí hacer mi casa con Daniela, ha sido una muy buena experiencia, sobre todo el aspecto creativo y la posibilidad de proponer ideas que ella lleva con mucha buena voluntad a la acción, a la realización. En mi casa que está en cerro con inclinación y bosque, ella logró ubicarla en un perfecto lugar para el tema luz, sol y encuentro con la naturaleza.",
     title: "Ximena Araneda Castex",
-    subtitle: "Falta Casa",
+    subtitle: "Casa en Los Riscos",
     url: "/images/home/opinions/opinion-04.jpg",
   },
 ];
