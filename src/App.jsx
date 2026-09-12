@@ -9,9 +9,13 @@ import Projects from "./pages/Architecture/Projects/ArchitectureProjects";
 import ProjectDetail from "./pages/Architecture/Projects/ArchitectureProjectDetail";
 import Regularization from "./pages/Regularization/Regularization";
 import LandDivision from "./pages/LandDivision/LandDivision";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
+
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/contacto" element={<Contact />} />
@@ -27,6 +31,8 @@ function App() {
 
       <Route path="/division-predios" element={<LandDivision />}/>
     </Routes>
+
+    </>
   );
 }
 

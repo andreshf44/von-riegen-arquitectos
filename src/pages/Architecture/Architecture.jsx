@@ -110,7 +110,7 @@ export default function Architecture() {
 
         <div className="architecture__hero-image">
           <img
-            src="/images/architecture/hero.jpeg"
+            src="/images/home/architecture.jpg"
             alt="Casa contemporánea en el sur de Chile"
           />
         </div>

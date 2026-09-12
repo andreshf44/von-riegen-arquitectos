@@ -45,7 +45,6 @@ export default function Footer() {
           </Link>
 
           <Link to="/division-predios">División de predios</Link>
-          <Link to="/division-predios">Fusión de predios</Link>
         </div>
 
         <div className="footer__column">
@@ -67,7 +66,6 @@ export default function Footer() {
           </Link>
 
           <Link to="/estudio">Quiénes somos</Link>
-          <Link to="/estudio">Enfoque</Link>
         </div>
 
         <div className="footer__column">
@@ -76,7 +74,6 @@ export default function Footer() {
           </Link>
 
           <Link to="/contacto">Formulario</Link>
-          <Link to="/contacto">Ubicación</Link>
         </div>
 
         <div className="footer__social">

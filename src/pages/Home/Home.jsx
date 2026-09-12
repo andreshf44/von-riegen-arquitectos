@@ -38,26 +38,31 @@ const services = [
 const opinions = [
   {
     number: "01",
-    commentary: "Nos acompañaron en todo el proceso con mucha claridad y cercanía. Entendieron lo que queriamos y lo transformaron en una casa que superó nuestras expectativas.",
-    title: "Familia Valdes",
-    subtitle: "Casa en Puerto Varas",
-    url: "/images/projects/casa-chucauco/1.JPG",
+    commentary: "Daniela brinda un servicio de arquitectura de alta calidad, destacando por su profesionalismo y compromiso. Se involucra personalmente en cada actividad y tarea del proyecto, realizando un seguimiento permanente de las tareas y manteniéndose siempre disponible para resolver consultas. Su dedicación y la capacidad de gestión,  generan confianza y garantizan una experiencia muy satisfactoria.",
+    title: "Rodrigo Lopez",
+    subtitle: "Falta Casa",
+    url: "/images/home/opinions/opinion-01.png",
   },
   {
     number: "02",
-    commentary:
-      "Desde el primer momento sentimos que nuestras ideas fueron escuchadas y llevadas a una propuesta que realmente representa nuestra forma de vivir.",
-    title: "Familia González",
-    subtitle: "Casa en Pucón",
-    url: "/images/projects/casa-chucauco/2.JPG",
+    commentary:"Con Daniela sentí que se logró una mezcla perfecta entre lo que yo tenía en mente y sus propuestas. En otras palabras supo leer al cliente y plasmar tanto en diseño, habitabilidad, luz y eficiencia energética un resultado equilibrado que me dejó muy satisfecho.",
+    title: "Falta Nombre",
+    subtitle: "Falta Casa",
+    url: "/images/home/opinions/opinion-02.png",
   },
   {
     number: "03",
-    commentary:
-      "El proceso fue claro, cercano y muy profesional. Nos sentimos acompañados en cada decisión hasta llegar al resultado final.",
-    title: "Familia Martínez",
-    subtitle: "Casa en Villarrica",
-    url: "/images/projects/casa-chucauco/3.JPG",
+    commentary:"Trabajar con Daniela fue muy bueno, ella supo escuchar e interpretar nuestras necesidades de muy buena manera. Proactiva, responsable y creativa, dispuesta a rediseñar y soltar ideas previas. Tuvimos una relación armónica, sin tensiones y de comunicación directa y clara.",
+    title: "Simón Aldunate",
+    subtitle: "Falta Casa",
+    url: "/images/home/opinions/opinion-03.jpg",
+  },
+  {
+    number: "04",
+    commentary:"Para mí hacer mi casa con Daniela, ha sido una muy buena experiencia, sobre todo el aspecto creativo y la posibilidad de proponer ideas que ella lleva con mucha buena voluntad a la acción, a la realización. En mi casa que está en cerro con inclinación y bosque, ella logró ubicarla en un perfecto lugar para el tema luz, sol y encuentro con la naturaleza.",
+    title: "Ximena Araneda Castex",
+    subtitle: "Falta Casa",
+    url: "/images/home/opinions/opinion-04.jpg",
   },
 ];
 
@@ -162,7 +167,7 @@ export default function Home() {
           </div>
 
           <div className="customers-opinion__navigation">
-            <p> {opinion.number} / {String(opinion.length).padStart(2, "0")}</p>
+            <p> {opinion.number} / {String(opinions.length).padStart(2, "0")}</p>
             <div className="customers-opinion__arrows">
               <button
                 type="button"

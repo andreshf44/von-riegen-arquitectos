@@ -191,19 +191,19 @@
   .service-card--architecture {
     background:
       linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
-      url("/public/images/home/architecture.jpeg") center / cover;
+      url("/public/images/home/architecture.jpg") center / cover;
   }
   
   .service-card--regularization {
     background:
       linear-gradient(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.08)),
-      url("/public/images/home/regularization.png") center / cover;
+      url("/public/images/home/regularization.jpg") center / cover;
   }
   
   .service-card--land {
     background:
       linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.1)),
-      url("/public/images/home/land.jpeg") center / cover;
+      url("/public/images/home/land.png") center / cover;
   }
   
   .service-card__overlay {
@@ -280,9 +280,9 @@
 
 .customers_opinion {
   display: grid;
-  grid-template-columns: 52% 20% 28%;
+  grid-template-columns: 60% 15% 25%;
 
-  height: 400px;
+  min-height: 326px;
 
   background: #f3f1eb;
 
@@ -331,9 +331,6 @@
 
   font-family: var(--font-serif);
 
-  font-size:
-    clamp(2rem, 2.8vw, 3.5rem);
-
   font-weight: 400;
 
   line-height: 1.08;
@@ -354,7 +351,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:space-evenly;
 
   border-left:
     1px solid rgba(47, 47, 44, 0.14);
@@ -393,8 +390,7 @@
 
 .customers-opinion__navigation {
   display: flex;
-  flex-direction: column;
-
+  align-items: center;
   gap: 18px;
 }
 
@@ -508,22 +504,35 @@
 
   
 @media (max-width: 900px) {
-    .home__intro {
-      grid-template-columns: 1fr;
-    }
+  .home__intro {
+    grid-template-columns: 1fr;
+  }
   
-    .home__drawing {
-      height: 220px;
-    }
+  .home__drawing {
+    height: 220px;
+  }
   
-    .home__services-grid {
-      grid-template-columns: 1fr;
-    }
+  .home__services-grid {
+    grid-template-columns: 1fr;
+  }
   
-    .service-card,
-    .service-card__content {
-      min-height: 420px;
-    }
+  .service-card,
+  .service-card__content {
+    min-height: 420px;
+  }
+
+  .customers_opinion{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .customers-opinion__info {
+    padding: 12px 34px;
+  }
+
+  .customers-opinion__navigation {
+    justify-content: space-between;
+  }
 }
   
 @media (max-width: 650px) {

@@ -23,12 +23,19 @@
 
 .navbar__brand {
   display: flex;
-  flex-direction: column;
-
+  gap: 7px;
   flex-shrink: 0;
-
+  align-items: center;
   color: inherit;
   line-height: 1;
+}
+
+.navbar__logo{
+  max-height: 70px;
+}
+
+.navbar__brand-text{
+  display: grid;
 }
 
 .navbar__brand span {
@@ -174,18 +181,112 @@
   .navbar {
     padding-left: clamp(22px, 4vw, 40px);
     padding-right: clamp(22px, 4vw, 40px);
+
+    position: relative;
+    z-index: 1000;
   }
 
-  /* FULL:
-     ocultamos links y dejamos menú */
-
   .navbar .navbar__nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    margin-left: 0;
+
+    padding:
+      18px
+      clamp(22px, 4vw, 40px)
+      28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    background: var(--color-background);
+
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-8px);
+
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease,
+      visibility 200ms ease;
+  }
+
+  /* MENU ABIERTO */
+
+  .navbar .navbar__nav.navbar__nav--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .navbar .navbar__nav a {
+    width: 100%;
+
+    padding: 16px 0;
+
+    font-size: 0.58rem;
+    letter-spacing: 0.11em;
+
+    border-bottom:
+      1px solid rgba(47, 47, 44, 0.1);
+  }
+
+  .navbar .navbar__nav a:last-child {
+    border-bottom: 0;
+  }
+
+  /* anulamos la línea desktop */
+  
+  .navbar .navbar__nav a::after {
     display: none;
   }
 
   .navbar .navbar__menu {
     margin-left: auto;
+
     display: flex;
+
+    position: relative;
+
+    z-index: 1001;
+  }
+
+  .navbar__menu span {
+    transition:
+      transform 180ms ease,
+      opacity 180ms ease;
+  }
+
+  /* HAMBURGUESA → X */
+
+  .navbar__menu--open span:nth-child(1) {
+    transform:
+      translateY(5px)
+      rotate(45deg);
+  }
+
+  .navbar__menu--open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar__menu--open span:nth-child(3) {
+    transform:
+      translateY(-5px)
+      rotate(-45deg);
   }
 }
 
