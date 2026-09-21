@@ -140,12 +140,6 @@ export default function ArchitectureProjectDetail() {
             Volver a proyectos
           </Link>
 
-          <div className="project-detail__counter">
-            {String(activeImageIndex + 1).padStart(2, "0")}
-            {" / "}
-            {String(galleryImages.length).padStart(2, "0")}
-          </div>
-
           <h1>{project.name}</h1>
 
           <div className="project-detail__small-line" />
@@ -213,27 +207,9 @@ export default function ArchitectureProjectDetail() {
             <Share2 strokeWidth={1.1} />
             Compartir proyecto
           </button>
-        </aside>
-
-        <div className="project-detail__visual">
-          <div className="project-detail__main-image">
-            <img
-              src={activeImage}
-              alt={`${project.name} ${activeImageIndex + 1}`}
-            />
-          </div>
 
           {galleryImages.length > 1 && (
             <div className="project-detail__thumbs">
-              <button
-                type="button"
-                className="project-detail__thumb-arrow"
-                onClick={goPreviousImage}
-                aria-label="Imagen anterior"
-              >
-                <ArrowLeft strokeWidth={1.1} />
-              </button>
-
               <div className="project-detail__thumb-list">
                 {galleryImages.map((image, index) => (
                   <button
@@ -255,17 +231,42 @@ export default function ArchitectureProjectDetail() {
                   </button>
                 ))}
               </div>
+              <div className="project-detail__counter">
+                <button
+                  type="button"
+                  className="project-detail__thumb-arrow"
+                  onClick={goPreviousImage}
+                  aria-label="Imagen anterior"
+                >
+                  <ArrowLeft strokeWidth={1.1} />
+                </button>
 
-              <button
-                type="button"
-                className="project-detail__thumb-arrow"
-                onClick={goNextImage}
-                aria-label="Imagen siguiente"
-              >
-                <ArrowRight strokeWidth={1.1} />
-              </button>
+                {String(activeImageIndex + 1).padStart(2, "0")}
+                {" / "}
+                {String(galleryImages.length).padStart(2, "0")}
+                
+                <button
+                  type="button"
+                  className="project-detail__thumb-arrow"
+                  onClick={goNextImage}
+                  aria-label="Imagen siguiente"
+                >
+                  <ArrowRight strokeWidth={1.1} />
+                </button>
+              </div>
+              
             </div>
           )}
+          
+        </aside>
+
+        <div className="project-detail__visual">
+          <div className="project-detail__main-image">
+            <img
+              src={activeImage}
+              alt={`${project.name} ${activeImageIndex + 1}`}
+            />
+          </div>
         </div>
       </section>
 
@@ -336,58 +337,6 @@ export default function ArchitectureProjectDetail() {
               />
             </div>
           )}
-        </section>
-      )}
-
-      {/* ========================================
-          LA CASA
-      ======================================== */}
-
-      {houseImages.length > 0 && (
-        <section className="project-detail__house">
-          <div className="project-detail__section-heading">
-            <span>La casa</span>
-          </div>
-
-          <div className="project-detail__house-grid">
-            {houseImages[0] && (
-              <div className="project-detail__house-image project-detail__house-image--left">
-                <img
-                  src={houseImages[0]}
-                  alt={`${project.name} exterior`}
-                />
-              </div>
-            )}
-
-            {houseImages[1] && (
-              <div className="project-detail__house-image project-detail__house-image--main">
-                <img
-                  src={houseImages[1]}
-                  alt={`${project.name} interior`}
-                />
-              </div>
-            )}
-
-            <div className="project-detail__house-side">
-              {houseImages[2] && (
-                <div className="project-detail__house-image">
-                  <img
-                    src={houseImages[2]}
-                    alt={`${project.name} detalle`}
-                  />
-                </div>
-              )}
-
-              {houseImages[3] && (
-                <div className="project-detail__house-image">
-                  <img
-                    src={houseImages[3]}
-                    alt={`${project.name} ambiente`}
-                  />
-                </div>
-              )}
-            </div>
-          </div>
         </section>
       )}
 

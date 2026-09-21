@@ -95,7 +95,7 @@ export default function Home() {
           <h1>
             Arquitectura
             <br />
-            para el sur.
+            para el sur
           </h1>
 
           <p className="home__description">

@@ -98,40 +98,6 @@ export default function ArchitectureProjects() {
       <Navbar variant="full" />
 
       {/* ========================================
-          HERO
-      ======================================== */}
-
-      <section className="projects-hero">
-        <div className="projects-hero__copy">
-          <span className="projects-eyebrow">
-            Arquitectura / Proyectos
-          </span>
-
-          <h1>
-            Proyectos de
-            <br />
-            arquitectura
-          </h1>
-
-          <div className="projects-small-line" />
-
-          <p>
-            Obras construidas con una mirada integral del lugar,
-            la luz y las personas. Cada proyecto es el resultado
-            de escuchar, entender y diseñar espacios que mejoran
-            la vida.
-          </p>
-        </div>
-
-        <div className="projects-hero__image">
-          <img
-            src="/images/projects/projects-hero.png"
-            alt="Arquitectura residencial en el sur de Chile"
-          />
-        </div>
-      </section>
-
-      {/* ========================================
           FILTERS
       ======================================== */}
 

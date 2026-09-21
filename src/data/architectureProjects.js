@@ -2,15 +2,15 @@
 
 export const architectureProjects = [
     {
-        slug: "casa-chucauco",
+        slug: "CASA LOS RISCOS 5",
       
-        name: "Casa Chucauco",
+        name: "CASA LOS RISCOS",
         category: "Vivienda",
         type: "Vivienda unifamiliar",
       
-        location: "Araucanía, Chile",
-        year: 2022,
-        area: "240 m²",
+        location: "Pucón, Chile",
+        year: 2023,
+        area: "140 m²",
       
         commission: "Proyecto de arquitectura",
         status: "Construido",
@@ -19,19 +19,17 @@ export const architectureProjects = [
         description:
           "Una casa diseñada para habitar el paisaje. Su arquitectura busca establecer una relación cercana con el entorno, integrando luz natural, materiales nobles y espacios que se abren hacia la naturaleza.",
       
-        cover: "/images/projects/casa-chucauco/1.JPG",
+        cover: "/images/projects/casa-riscos5/portada.png",
       
         images: [
-          "/images/projects/casa-chucauco/1.JPG",
-          "/images/projects/casa-chucauco/2.JPG",
-          "/images/projects/casa-chucauco/3.JPG",
-          "/images/projects/casa-chucauco/4.jpg",
-          "/images/projects/casa-chucauco/5.jpg",
-          "/images/projects/casa-chucauco/6.JPG",
-          "/images/projects/casa-chucauco/7.JPG",
-          "/images/projects/casa-chucauco/8.png",
-          "/images/projects/casa-chucauco/9.jpg",
-          "/images/projects/casa-chucauco/10.jpeg",
+          "/images/projects/casa-riscos5/01.png",
+          "/images/projects/casa-riscos5/02.png",
+          "/images/projects/casa-riscos5/03.png",
+          "/images/projects/casa-riscos5/04.png",
+          "/images/projects/casa-riscos5/05.png",
+          "/images/projects/casa-riscos5/06.png",
+          "/images/projects/casa-riscos5/07.png",
+          "/images/projects/casa-riscos5/08.png",
         ],
       
         /* =========================

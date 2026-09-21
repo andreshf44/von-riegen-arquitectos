@@ -343,27 +343,27 @@ export default function Architecture() {
 
         <div className="architecture__projects-grid">
           <ProjectCard
-            image="/images/architecture/project-01.jpeg"
-            name="Casa Pucón"
-            location="Pucón"
-            year="2022"
-            area="240 m²"
-          />
-
-          <ProjectCard
-            image="/images/architecture/project-02.jpeg"
-            name="Casa Villarrica"
-            location="Villarrica"
-            year="2021"
-            area="180 m²"
-          />
-
-          <ProjectCard
-            image="/images/architecture/project-03.jpeg"
-            name="Casa Caburgua"
-            location="Caburgua"
+            image="/images/architecture/project-01.png"
+            name="CASA LOS RISCOS"
+            location="Los Riscos, Pucón"
             year="2023"
-            area="210 m²"
+            area="140 m²"
+          />
+
+          <ProjectCard
+            image="/images/architecture/project-02.png"
+            name="LA COVADONGA"
+            location="Candelaria, Pucón"
+            year="2022"
+            area="140 m²"
+          />
+
+          <ProjectCard
+            image="/images/architecture/project-03.jpg"
+            name="REFUGIO TINQUILCO"
+            location="Pucón"
+            year="2020"
+            area="95 m²"
           />
         </div>
       </section>
