@@ -1,6 +1,12 @@
 // src/pages/Architecture/Projects/ArchitectureProjectDetail.jsx
 
-import { useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+
 import { Link, useParams } from "react-router";
 
 import {
@@ -55,6 +61,45 @@ export default function ArchitectureProjectDetail() {
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
+  /* =========================================================
+     THUMBNAIL CAROUSEL
+  ========================================================= */
+
+  const thumbnailsViewportRef = useRef(null);
+  const thumbnailRefs = useRef([]);
+
+  useEffect(() => {
+    const viewport = thumbnailsViewportRef.current;
+    const activeThumbnail =
+      thumbnailRefs.current[activeImageIndex];
+
+    if (!viewport || !activeThumbnail) return;
+
+    const viewportRect =
+      viewport.getBoundingClientRect();
+
+    const thumbnailRect =
+      activeThumbnail.getBoundingClientRect();
+
+    const isOutsideLeft =
+      thumbnailRect.left < viewportRect.left;
+
+    const isOutsideRight =
+      thumbnailRect.right > viewportRect.right;
+
+    if (isOutsideLeft || isOutsideRight) {
+      activeThumbnail.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "nearest",
+      });
+    }
+  }, [activeImageIndex]);
+
+  /* =========================================================
+     PROJECT NOT FOUND
+  ========================================================= */
+
   if (!project) {
     return (
       <main className="project-detail-page">
@@ -85,6 +130,10 @@ export default function ArchitectureProjectDetail() {
     );
   }
 
+  /* =========================================================
+     PROJECT DATA
+  ========================================================= */
+
   const activeImage =
     galleryImages[activeImageIndex] || project.cover;
 
@@ -101,10 +150,9 @@ export default function ArchitectureProjectDetail() {
     project.concept?.description ||
     project.principles?.length > 0;
 
-  const houseImages =
-    galleryImages.length > 1
-      ? galleryImages.slice(1, 5)
-      : galleryImages;
+  /* =========================================================
+     GALLERY CONTROLS
+  ========================================================= */
 
   const goPreviousImage = () => {
     setActiveImageIndex((current) =>
@@ -132,6 +180,7 @@ export default function ArchitectureProjectDetail() {
 
       <section className="project-detail__hero">
         <aside className="project-detail__sidebar">
+
           <Link
             to="/arquitectura/proyectos"
             className="project-detail__back"
@@ -154,8 +203,13 @@ export default function ArchitectureProjectDetail() {
             </p>
           )}
 
+          {/* ========================================
+              TECHNICAL DATA
+          ======================================== */}
+
           {hasTechnicalData && (
             <dl className="project-detail__technical">
+
               {project.location && (
                 <>
                   <dt>Ubicación</dt>
@@ -197,8 +251,13 @@ export default function ArchitectureProjectDetail() {
                   <dd>{project.photography}</dd>
                 </>
               )}
+
             </dl>
           )}
+
+          {/* ========================================
+              SHARE
+          ======================================== */}
 
           <button
             type="button"
@@ -208,30 +267,56 @@ export default function ArchitectureProjectDetail() {
             Compartir proyecto
           </button>
 
+          {/* ========================================
+              THUMBNAIL GALLERY
+          ======================================== */}
+
           {galleryImages.length > 1 && (
             <div className="project-detail__thumbs">
-              <div className="project-detail__thumb-list">
-                {galleryImages.map((image, index) => (
-                  <button
-                    type="button"
-                    key={`${project.slug}-${index}`}
-                    className={
-                      activeImageIndex === index
-                        ? "project-detail__thumb project-detail__thumb--active"
-                        : "project-detail__thumb"
-                    }
-                    onClick={() =>
-                      setActiveImageIndex(index)
-                    }
-                  >
-                    <img
-                      src={image}
-                      alt={`${project.name} ${index + 1}`}
-                    />
-                  </button>
-                ))}
+
+              <div
+                className="project-detail__thumb-viewport"
+                ref={thumbnailsViewportRef}
+              >
+                <div className="project-detail__thumb-list">
+
+                  {galleryImages.map((image, index) => (
+                    <button
+                      type="button"
+                      key={`${project.slug}-${index}`}
+                      ref={(element) => {
+                        thumbnailRefs.current[index] = element;
+                      }}
+                      className={
+                        activeImageIndex === index
+                          ? "project-detail__thumb project-detail__thumb--active"
+                          : "project-detail__thumb"
+                      }
+                      onClick={() =>
+                        setActiveImageIndex(index)
+                      }
+                      aria-label={`Ver imagen ${
+                        index + 1
+                      } de ${galleryImages.length}`}
+                    >
+                      <img
+                        src={image}
+                        alt={`${project.name} ${
+                          index + 1
+                        }`}
+                      />
+                    </button>
+                  ))}
+
+                </div>
               </div>
+
+              {/* ========================================
+                  COUNTER + ARROWS
+              ======================================== */}
+
               <div className="project-detail__counter">
+
                 <button
                   type="button"
                   className="project-detail__thumb-arrow"
@@ -241,10 +326,18 @@ export default function ArchitectureProjectDetail() {
                   <ArrowLeft strokeWidth={1.1} />
                 </button>
 
-                {String(activeImageIndex + 1).padStart(2, "0")}
-                {" / "}
-                {String(galleryImages.length).padStart(2, "0")}
-                
+                <span>
+                  {String(
+                    activeImageIndex + 1
+                  ).padStart(2, "0")}
+
+                  {" / "}
+
+                  {String(
+                    galleryImages.length
+                  ).padStart(2, "0")}
+                </span>
+
                 <button
                   type="button"
                   className="project-detail__thumb-arrow"
@@ -253,21 +346,29 @@ export default function ArchitectureProjectDetail() {
                 >
                   <ArrowRight strokeWidth={1.1} />
                 </button>
+
               </div>
-              
+
             </div>
           )}
-          
+
         </aside>
+
+        {/* ========================================
+            MAIN IMAGE
+        ======================================== */}
 
         <div className="project-detail__visual">
           <div className="project-detail__main-image">
             <img
               src={activeImage}
-              alt={`${project.name} ${activeImageIndex + 1}`}
+              alt={`${project.name} ${
+                activeImageIndex + 1
+              }`}
             />
           </div>
         </div>
+
       </section>
 
       {/* ========================================
@@ -276,7 +377,9 @@ export default function ArchitectureProjectDetail() {
 
       {hasConcept && (
         <section className="project-detail__concept">
+
           <div className="project-detail__concept-copy">
+
             <span className="project-detail__eyebrow">
               {project.concept?.eyebrow || "El proyecto"}
             </span>
@@ -294,12 +397,15 @@ export default function ArchitectureProjectDetail() {
                 {project.concept.description}
               </p>
             )}
+
           </div>
 
           {project.principles?.length > 0 && (
             <div className="project-detail__principles">
+
               {project.principles.map(
                 (principle, index) => {
+
                   const PrincipleIcon =
                     index === 0
                       ? Sun
@@ -311,6 +417,7 @@ export default function ArchitectureProjectDetail() {
                     <article
                       key={`${project.slug}-${principle.title}`}
                     >
+
                       <PrincipleIcon
                         strokeWidth={1}
                       />
@@ -322,21 +429,26 @@ export default function ArchitectureProjectDetail() {
                       <p>
                         {principle.description}
                       </p>
+
                     </article>
                   );
                 }
               )}
+
             </div>
           )}
 
           {project.sketch && (
             <div className="project-detail__concept-sketch">
+
               <img
                 src={project.sketch}
                 alt={`Croquis de ${project.name}`}
               />
+
             </div>
           )}
+
         </section>
       )}
 
@@ -346,115 +458,93 @@ export default function ArchitectureProjectDetail() {
 
       {project.plans?.length > 0 && (
         <section className="project-detail__plans">
+
+          {/* COLUMNA IZQUIERDA */}
           <div className="project-detail__plans-copy">
+
             <span className="project-detail__eyebrow">
-              Planos
+              Planos y materialidad
             </span>
 
             <div className="project-detail__small-line" />
 
-            <p>
-              Planta de arquitectura y esquemas
-              de implantación.
-            </p>
+            {/* MATERIALIDAD */}
+            {project.materials?.length > 0 && (
+              <div className="project-detail__plans-materials">
+
+                {project.materials.map((material) => (
+                  <div
+                    className="project-detail__plans-material"
+                    key={`${project.slug}-${material.name}`}
+                  >
+                    <span className="project-detail__plans-material-name">
+                      {material.name}
+                    </span>
+
+                    <p>
+                      {material.description}
+                    </p>
+                  </div>
+                ))}
+
+              </div>
+            )}
+
           </div>
 
+
+          {/* COLUMNA DERECHA — PLANOS */}
           <div className="project-detail__plans-grid">
+
             {project.plans.map((plan) => (
               <figure
                 key={`${project.slug}-${plan.name}`}
               >
+
                 <div className="project-detail__plan-image">
+
                   <img
                     src={plan.image}
                     alt={plan.name}
                   />
+
                 </div>
 
                 <figcaption>
                   {plan.name}
                 </figcaption>
+
               </figure>
             ))}
+
           </div>
+
         </section>
       )}
-
-      {/* ========================================
-          MATERIALIDAD
-      ======================================== */}
-
-      {project.materials?.length > 0 && (
-        <section className="project-detail__materials">
-          <div className="project-detail__materials-copy">
-            <span className="project-detail__eyebrow">
-              Materialidad
-            </span>
-
-            <div className="project-detail__small-line" />
-
-            <p>
-              Una paleta honesta y atemporal
-              que dialoga con el paisaje.
-            </p>
-          </div>
-
-          <div className="project-detail__materials-grid">
-            {project.materials.map((material) => (
-              <article
-                key={`${project.slug}-${material.name}`}
-              >
-                {material.image && (
-                  <div className="project-detail__material-image">
-                    <img
-                      src={material.image}
-                      alt={material.name}
-                    />
-                  </div>
-                )}
-
-                <h3>
-                  {material.name}
-                </h3>
-
-                {material.description && (
-                  <p>
-                    {material.description}
-                  </p>
-                )}
-              </article>
-            ))}
-          </div>
-
-          {project.materialsPhoto && (
-      <div className="project-detail__materials-photo">
-        <img
-          src={project.materialsPhoto}
-          alt={`Materialidad de ${project.name}`}
-        />
-      </div>
-    )}
-        </section>
-      )}
-
       {/* ========================================
           PROJECT NAVIGATION
       ======================================== */}
 
       <nav className="project-detail__navigation">
+
         {previousProject && (
           <Link
             to={`/arquitectura/proyectos/${previousProject.slug}`}
             className="project-detail__navigation-project"
           >
+
             <ArrowLeft strokeWidth={1.1} />
 
             <div>
-              <span>Proyecto anterior</span>
+              <span>
+                Proyecto anterior
+              </span>
+
               <strong>
                 {previousProject.name}
               </strong>
             </div>
+
           </Link>
         )}
 
@@ -462,11 +552,13 @@ export default function ArchitectureProjectDetail() {
           to="/arquitectura/proyectos"
           className="project-detail__navigation-all"
         >
+
           <Grid2X2 strokeWidth={1} />
 
           <span>
             Ver todos los proyectos
           </span>
+
         </Link>
 
         {nextProject && (
@@ -474,19 +566,26 @@ export default function ArchitectureProjectDetail() {
             to={`/arquitectura/proyectos/${nextProject.slug}`}
             className="project-detail__navigation-project project-detail__navigation-project--next"
           >
+
             <div>
-              <span>Siguiente proyecto</span>
+              <span>
+                Siguiente proyecto
+              </span>
+
               <strong>
                 {nextProject.name}
               </strong>
             </div>
 
             <ArrowRight strokeWidth={1.1} />
+
           </Link>
         )}
+
       </nav>
 
       <Footer />
+
     </main>
   );
 }
