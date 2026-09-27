@@ -499,6 +499,16 @@
   gap: 14px;
 }
 
+/* Si hay un solo plano */
+.project-detail__plans-grid:has(figure:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.project-detail__plans-grid:has(figure:only-child) figure {
+  width: 75%;
+  justify-self: center;
+}
+
 .project-detail__plans-grid figure {
   margin: 0;
 }

@@ -64,6 +64,13 @@ const opinions = [
     subtitle: "Casa en Los Riscos",
     url: "/images/home/opinions/opinion-04.jpg",
   },
+  {
+    number: "05",
+    commentary:"Excelente profesional, diligente y siempre disponible ante dudas, rápida, eficiente y eficaz. Gracias Daniela",
+    title: "Familia Pérez Weber",
+    subtitle: "Casa Weber",
+    url: "falta imagen",
+  },
 ];
 
 export default function Home() {

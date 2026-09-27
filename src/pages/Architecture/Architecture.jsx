@@ -183,7 +183,7 @@ export default function Architecture() {
 
         <div className="architecture__approach-image">
           <img
-            src="/images/architecture/approach.jpeg"
+            src="/images/architecture/approach.JPG"
             alt="Interior de vivienda integrado al paisaje"
           />
         </div>
@@ -238,7 +238,7 @@ export default function Architecture() {
 
         <div className="architecture__includes-image">
           <img
-            src="/images/architecture/detail.jpeg"
+            src="/images/architecture/detail.jpg"
             alt="Interior de vivienda contemporánea"
           />
         </div>
