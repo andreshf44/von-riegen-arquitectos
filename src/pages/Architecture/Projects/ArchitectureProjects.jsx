@@ -17,7 +17,7 @@ const filters = [
   "Todos",
   "Viviendas",
   "Refugios",
-  "Interiorismo",
+  "Proyectos",
 ];
 
 export default function ArchitectureProjects() {
@@ -46,9 +46,9 @@ export default function ArchitectureProjects() {
       );
     }
 
-    if (activeFilter === "Interiorismo") {
+    if (activeFilter === "Proyectos") {
       result = result.filter(
-        (project) => project.category === "Interiorismo"
+        (project) => project.category === "Proyecto"
       );
     }
 

@@ -47,31 +47,34 @@ export const architectureProjects = [
       
     concept: {
       eyebrow: "El proyecto",
-
+    
       title: "La caja ortogonal",
-  
+    
       description:
         "El proyecto parte de una imagen clara planteada por el cliente: una casa de dos aguas con un corredor techado. A partir de esa referencia, la propuesta transforma un volumen simple para responder a la luz, las vistas y la manera de habitar.",
     },
-      
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
           "El corredor techado protege los espacios exteriores, pero reduce la entrada directa de luz. Ventanas altas sobre el corredor permiten iluminar naturalmente el interior y potenciar la calidez de la madera.",
       },
-  
+    
       {
         title: "Vistas",
-  
+        icon: "Mountain",
+    
         description:
           "Las principales vistas se orientan hacia el lago Villarrica por el norte, haciendo coincidir la relación con el paisaje con una orientación favorable para el diseño solar pasivo.",
       },
-  
+    
       {
         title: "Volumen",
-  
+        icon: "Box",
+    
         description:
           "La caja ortogonal se retranquea para dar cabida a un corredor techado que abraza dos lados de la vivienda. El gesto continúa en el segundo nivel mediante ventanas que iluminan la doble altura interior.",
       },
@@ -177,31 +180,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "La Covadonga",
-  
+    
       description:
         "El proyecto nace a partir de una planta propuesta inicialmente por la clienta y de una necesidad particular: incorporar un taller de orfebrería. La propuesta busca ordenar estas necesidades y equilibrar la composición de la vivienda, evitando que el volumen de dos pisos concentre todo el protagonismo.",
     },
-  
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
           "La vivienda se orienta hacia el norte para aprovechar la luz natural durante el día. En el interior, el trabajo de color contribuye a mantener espacios luminosos, especialmente en torno a la escalera como elemento central.",
       },
-  
+    
       {
         title: "Vistas",
-  
+        icon: "Mountain",
+    
         description:
           "La casa se abre hacia el paisaje y hacia el lago Villarrica a la distancia, enmarcando las vistas desde los principales espacios interiores.",
       },
-  
+    
       {
         title: "Volumen",
-  
+        icon: "Box",
+    
         description:
           "La composición busca equilibrar el protagonismo del volumen de dos pisos. La incorporación del techo del estacionamiento ayuda a extender horizontalmente la vivienda y balancear sus proporciones.",
       },
@@ -226,14 +232,6 @@ export const architectureProjects = [
       {
         name: "Planta nivel 2",
         image: "/images/projects/casa-candelaria1/planta_2.png",
-      },
-      {
-        name: "Elevaciones",
-        image: "/images/projects/casa-candelaria1/elevaciones_plano.png",
-      },
-      {
-        name: "Cortes",
-        image: "/images/projects/casa-candelaria1/cortes_plano.png",
       },
     ],
 
@@ -304,33 +302,36 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
-      title: "Refugio tipo galpón nórdico",
-  
+    
+      title: "Un refugio abierto al paisaje",
+    
       description:
-        "Inspirado en las casas nórdicas y desarrollado para un cliente de origen holandés, el refugio adopta una forma clara y simétrica que dialoga con las líneas de las montañas. La propuesta busca integrarse al terreno, potenciar las vistas hacia el lago Tinquilco y protegerse del viento, manteniendo una relación directa con la luz y el paisaje.",
+        "Inspirado en las casas nórdicas, el refugio adopta una forma clara y simétrica que dialoga con las líneas de las montañas. La propuesta se abre hacia el lago Tinquilco y la orientación norte, mientras se protege del viento y de las orientaciones menos soleadas.",
     },
-  
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
-          "La orientación norte permite aprovechar la luz natural durante el día, mientras la vivienda se mantiene más hermética hacia las orientaciones menos soleadas.",
+          "La orientación norte permite aprovechar la luz natural durante el día, mientras las fachadas hacia las orientaciones menos soleadas adoptan una condición más hermética.",
       },
-  
+    
       {
         title: "Vistas",
-  
+        icon: "Mountain",
+    
         description:
-          "La vivienda se abre hacia el paisaje del lago Tinquilco. El gran ventanal de piso a techo enmarca el entorno y funciona como una postal permanente desde los espacios interiores.",
+          "Un gran ventanal de piso a techo abre los espacios interiores hacia el lago Tinquilco y las montañas, convirtiendo el paisaje en parte central de la experiencia del refugio.",
       },
-  
+    
       {
         title: "Espacialidad",
-  
+        icon: "MoveUpRight",
+    
         description:
-          "Las vigas expuestas cumplen una doble función estructural y expresiva. Su presencia refuerza el carácter del refugio y contribuye a aumentar visualmente la percepción de altura del espacio interior.",
+          "Las vigas expuestas cumplen una función estructural y expresiva, reforzando el carácter del refugio y aumentando visualmente la percepción de altura del espacio interior.",
       },
     ],
   
@@ -443,31 +444,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "La casa que se torció para mirar al lago",
-  
+    
       description:
         "El proyecto responde a un terreno complejo: una pendiente hacia el sur, un bosque al poniente y vistas al lago Villarrica que solo aparecen al ganar altura. La vivienda se implanta transversalmente a la pendiente y transforma su volumen para conciliar paisaje, asoleamiento y topografía.",
     },
-  
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
           "La orientación transversal respecto de la pendiente y las aperturas hacia el norte permiten optimizar el asoleamiento. Hacia el sur, la vivienda adopta una condición más hermética para reducir las pérdidas de calor.",
       },
-  
+    
       {
         title: "Vistas",
-  
+        icon: "Eye",
+    
         description:
           "Las vistas privilegiadas hacia el lago Villarrica aparecen por sobre el nivel natural del terreno. La vivienda gana altura para capturarlas y orientar sus principales espacios hacia el paisaje.",
       },
-  
+    
       {
         title: "Implantación",
-  
+        icon: "Mountain",
+    
         description:
           "El volumen se quiebra en dos puntos para adaptarse al terreno, alejarse del bosque ubicado al poniente y mejorar su orientación. La casa alcanza dos pisos y medio y combina una fundación en radier con sectores elevados sobre palafitos.",
       },
@@ -528,7 +532,7 @@ export const architectureProjects = [
     slug: "casa-pedregoso",
   
     name: "CASA PEDREGOSO",
-    category: "Vivienda",
+    category: "Proyecto",
     type: "Vivienda unifamiliar",
   
     location: "Pucón, Araucanía, Chile",
@@ -564,33 +568,36 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Dos volúmenes entre piedra, metal y luz",
-  
+    
       description:
         "La vivienda se organiza a partir de dos volúmenes de cubierta a dos aguas: uno principal de doble altura y otro de un piso. La propuesta contrapone la presencia de los testeros revestidos en piedra con la ligereza de la envolvente metálica, mientras grandes superficies vidriadas y un lucarnario incorporan luz natural al corazón de la casa.",
     },
-  
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
-          "Los grandes paños vidriados de doble altura en los hastiales y un lucarnario inclinado permiten que la luz natural ingrese desde distintas alturas, iluminando el volumen principal y reforzando su condición vertical.",
+          "Los grandes paños vidriados en los hastiales y el lucarnario inclinado incorporan luz natural desde distintas alturas, iluminando el volumen principal y acentuando la verticalidad del espacio.",
       },
-  
+    
       {
         title: "Espacialidad",
-  
+        icon: "Maximize",
+    
         description:
-          "El programa se desarrolla en tres niveles. El primer piso concentra las áreas sociales en una planta abierta con living, comedor y cocina en isla, mientras los niveles superiores albergan los dormitorios y se articulan mediante una escalera junto al vacío de doble altura.",
+          "El vacío de doble altura conecta visualmente los distintos niveles y amplifica el espacio común, mientras la escalera articula verticalmente las áreas sociales con los recintos más privados.",
       },
-  
+    
       {
         title: "Envolvente",
-  
+        icon: "Layers",
+    
         description:
-          "Piedra y metal construyen dos expresiones complementarias: los testeros adquieren una condición más sólida y pétrea, mientras los paños longitudinales y las cubiertas utilizan una envolvente metálica acanalada de carácter más ligero.",
+          "Piedra y metal construyen dos expresiones complementarias. Los testeros de piedra anclan los volúmenes al terreno, mientras la envolvente metálica unifica las fachadas longitudinales y las cubiertas con una expresión más ligera.",
       },
     ],
   
@@ -615,11 +622,6 @@ export const architectureProjects = [
         name: "Plantas nivel 1 y nivel 2",
         image:
           "/images/projects/casa-pedregoso/plantas.png",
-      },
-      {
-        name: "Planta de cubierta",
-        image:
-          "/images/projects/casa-pedregoso/planta_cubierta.png",
       },
       {
         name: "Elevaciones Norte y Sur",
@@ -681,7 +683,7 @@ export const architectureProjects = [
     slug: "refugio-aframe",
   
     name: "REFUGIO A-FRAME EN EL BOSQUE",
-    category: "Vivienda",
+    category: "Refugio",
     type: "Vivienda unifamiliar",
   
     location: "Pucón, Araucanía, Chile",
@@ -723,33 +725,36 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Habitar bajo la cubierta",
-  
+    
       description:
         "El proyecto reinterpreta la tipología tradicional de refugio de montaña a partir de una estructura A-Frame. El desafío fue transformar la estrechez geométrica de sus planos inclinados en un interior amplio y luminoso, resolviendo con precisión la relación entre estructura, aislación y aprovechamiento del espacio bajo cubierta.",
     },
-  
+    
     principles: [
       {
         title: "Geometría",
-  
+        icon: "Triangle",
+    
         description:
-          "La estructura A-Frame define la forma y organización de la vivienda. Sus planos inclinados reducen la superficie útil disponible, haciendo necesario aprovechar cuidadosamente cada área interior.",
+          "La estructura A-Frame define la forma y organización de la vivienda. Sus planos inclinados condicionan la superficie útil y convierten la geometría de la cubierta en el principal elemento arquitectónico del proyecto.",
       },
-  
+    
       {
         title: "Espacialidad",
-  
+        icon: "Maximize2",
+    
         description:
-          "La organización interior busca ampliar la percepción del espacio dentro de una vivienda de 70 m², utilizando la altura y la continuidad de la cubierta como parte fundamental de la experiencia interior.",
+          "La organización interior aprovecha la altura y continuidad de la cubierta para ampliar la percepción del espacio dentro de una vivienda de 70 m² y optimizar las áreas habitables.",
       },
-  
+    
       {
         title: "Materialidad",
-  
+        icon: "Layers",
+    
         description:
-          "La madera interior terminada con albayalde aporta calidez y luminosidad, mientras el zinc prepintado grafito construye una envolvente exterior más sobria y contemporánea, estableciendo un contraste con el entorno natural.",
+          "La madera interior con terminación albayalde aporta calidez y luminosidad, mientras el zinc prepintado grafito construye una envolvente exterior sobria que contrasta con el entorno natural.",
       },
     ],
   
@@ -804,7 +809,7 @@ export const architectureProjects = [
     slug: "casa-los-nevados",
   
     name: "CASA LOS NEVADOS",
-    category: "Vivienda",
+    category: "Proyecto",
     type: "Vivienda unifamiliar",
   
     location: "Los Nevados, Pucón, Araucanía, Chile",
@@ -845,31 +850,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Habitar entre el bosque",
-  
+    
       description:
         "La vivienda se organiza mediante una composición de volúmenes de distintas escalas que se extienden sobre el terreno y convergen en las áreas comunes. Las cubiertas inclinadas construyen una silueta fragmentada que reduce la percepción de una única gran masa y permite que la casa dialogue con la escala vertical del bosque.",
     },
-  
+    
     principles: [
       {
         title: "Volumen",
-  
+        icon: "Box",
+    
         description:
           "La casa evita resolverse como un único cuerpo compacto. Una sucesión de volúmenes con cubiertas a dos aguas diferencia las distintas áreas del programa y construye una composición de menor escala dentro del paisaje.",
       },
-  
+    
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
           "Los espacios principales incorporan grandes superficies vidriadas y aperturas asociadas a los hastiales, permitiendo que la luz natural penetre profundamente en los recintos de mayor altura.",
       },
-  
+    
       {
         title: "Paisaje",
-  
+        icon: "Trees",
+    
         description:
           "La vivienda se abre hacia el bosque mediante ventanales y espacios exteriores cubiertos que prolongan las áreas interiores y establecen una relación continua con el entorno.",
       },
@@ -931,9 +939,9 @@ export const architectureProjects = [
   },
 
   {
-    slug: "refugio-candelaria2",
+    slug: "casa-candelaria2",
   
-    name: "REFUGIO CANDELARIA II",
+    name: "CASA CANDELARIA II",
     category: "Vivienda",
     type: "Vivienda unifamiliar",
   
@@ -949,7 +957,7 @@ export const architectureProjects = [
       "Vivienda elevada sobre pilotes de hormigón que se adapta a la topografía del bosque nativo, combinando una envolvente de madera y fibrocemento azul noche con una estrecha relación entre interior y paisaje.",
   
     cover:
-      "/images/projects/refugio-candelaria2/portada.jpg",
+      "/images/projects/casa-candelaria2/portada.jpg",
   
     program: [
       "2 dormitorios",
@@ -960,14 +968,14 @@ export const architectureProjects = [
     ],
   
     images: [
-      "/images/projects/refugio-candelaria2/01.JPG",
-      "/images/projects/refugio-candelaria2/02.JPG",
-      "/images/projects/refugio-candelaria2/03.JPG",
-      "/images/projects/refugio-candelaria2/04.JPG",
-      "/images/projects/refugio-candelaria2/05.JPG",
-      "/images/projects/refugio-candelaria2/06.jpg",
-      "/images/projects/refugio-candelaria2/07.JPG",
-      "/images/projects/refugio-candelaria2/08.JPG",
+      "/images/projects/casa-candelaria2/01.JPG",
+      "/images/projects/casa-candelaria2/02.JPG",
+      "/images/projects/casa-candelaria2/03.JPG",
+      "/images/projects/casa-candelaria2/04.JPG",
+      "/images/projects/casa-candelaria2/05.JPG",
+      "/images/projects/casa-candelaria2/06.jpg",
+      "/images/projects/casa-candelaria2/07.JPG",
+      "/images/projects/casa-candelaria2/08.JPG",
     ],
   
     /* =========================
@@ -976,38 +984,41 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Habitar sobre el bosque",
-  
+    
       description:
-        "El proyecto aborda la condición de una vivienda elevada sobre pilotes y expuesta a la intemperie del bosque. La propuesta busca equilibrar esta relación directa con el terreno y el paisaje con una experiencia interior cálida y protegida, resolviendo la envolvente térmica y estructural sin renunciar a la amplitud visual.",
+        "La vivienda se eleva sobre pilotes para adaptarse a la topografía y mantener una relación directa con el bosque. La propuesta combina una envolvente protegida frente a las condiciones del entorno con espacios interiores cálidos y abiertos hacia el paisaje.",
     },
-  
+    
     principles: [
       {
         title: "Topografía",
-  
+        icon: "Mountain",
+    
         description:
           "La vivienda se eleva sobre pilotes de hormigón para adaptarse al terreno y reducir su intervención sobre la topografía existente.",
       },
-  
+    
       {
         title: "Protección",
-  
+        icon: "Umbrella",
+    
         description:
-          "La cubierta mono-pendiente se prolonga hacia el frente mediante un alero de gran vuelo que protege la terraza de acceso y genera una transición entre el interior y el bosque.",
+          "La cubierta mono-pendiente se prolonga mediante un alero de gran vuelo que protege la terraza de acceso y construye una transición resguardada entre el interior y el bosque.",
       },
-  
+    
       {
         title: "Materialidad",
-  
+        icon: "Layers",
+    
         description:
-          "La madera aporta calidez a los espacios interiores, mientras el revestimiento exterior de fibrocemento responde a la exposición de la vivienda a las condiciones del entorno.",
+          "La madera aporta calidez a los espacios interiores, mientras el fibrocemento construye una envolvente exterior preparada para la exposición a las condiciones del entorno.",
       },
     ],
   
     sketch:
-      "/images/projects/refugio-candelaria2/sketch.png",
+      "/images/projects/casa-candelaria2/sketch.png",
   
   
     // ======================================================
@@ -1021,17 +1032,12 @@ export const architectureProjects = [
       {
         name: "Planta general",
         image:
-          "/images/projects/refugio-candelaria2/plantas.png",
+          "/images/projects/casa-candelaria2/plantas.png",
       },
       {
         name: "Corte longitudinal",
         image:
-          "/images/projects/refugio-candelaria2/corte_1.png",
-      },
-      {
-        name: "Corte transversal",
-        image:
-          "/images/projects/refugio-candelaria2/corte_2.png",
+          "/images/projects/casa-candelaria2/corte_1.png",
       },
     ],
 
@@ -1067,8 +1073,8 @@ export const architectureProjects = [
   {
     slug: "proyecto-dawullco",
   
-    name: "PROYECTO DAWULLCO",
-    category: "Vivienda",
+    name: "CASA DAWULLCO",
+    category: "Proyecto",
     type: "Vivienda unifamiliar",
   
     location: "Pucón, Araucanía, Chile",
@@ -1106,31 +1112,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Una cubierta que reúne casa, terraza y paisaje",
-  
+    
       description:
         "El proyecto se organiza a partir de una planta alargada y una cubierta de gran extensión que acompaña el desarrollo de la vivienda. Su geometría permite reunir bajo un mismo plano los recintos interiores, las expansiones exteriores y el estacionamiento, construyendo una relación continua entre arquitectura y terreno.",
     },
-  
+    
     principles: [
       {
         title: "Horizontalidad",
-  
+        icon: "MoveHorizontal",
+    
         description:
           "La vivienda se desarrolla principalmente en un nivel y enfatiza su dimensión longitudinal. La cubierta refuerza esta condición y unifica visualmente las distintas áreas del programa.",
       },
-  
+    
       {
         title: "Apertura",
-  
+        icon: "PanelTopOpen",
+    
         description:
           "Los espacios principales se abren hacia el exterior mediante grandes superficies vidriadas y una terraza longitudinal, extendiendo visualmente los interiores hacia el paisaje.",
       },
-  
+    
       {
         title: "Cubierta",
-  
+        icon: "Triangle",
+    
         description:
           "Un gran plano de cubierta inclinado articula el conjunto y se prolonga más allá del volumen cerrado para generar áreas protegidas, incluyendo el estacionamiento.",
       },
@@ -1151,11 +1160,6 @@ export const architectureProjects = [
         name: "Planta general",
         image:
           "/images/projects/dawullco/planta_general.png",
-      },
-      {
-        name: "Elevación longitudinal",
-        image:
-          "/images/projects/dawullco/elevacion_longitudinal.png",
       },
     ],
   
@@ -1225,31 +1229,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Una casa articulada por sus espacios intermedios",
-  
+    
       description:
         "La vivienda se inserta en un entorno de bosque y utiliza el garaje y el porche como piezas que amplían la experiencia exterior de la casa. Estos espacios intermedios no funcionan únicamente como anexos, sino que participan de la composición y de la relación entre interior, acceso y paisaje.",
     },
-  
+    
     principles: [
       {
         title: "Luz",
-  
+        icon: "Sun",
+    
         description:
           "Los tragaluces incorporados en el garaje y el porche permiten que la luz natural atraviese estos espacios cubiertos y alcance los recintos interiores que se encuentran detrás.",
       },
-  
+    
       {
         title: "Umbral",
-  
+        icon: "DoorOpen",
+    
         description:
           "El garaje y el porche construyen una transición entre el bosque y el interior, generando espacios exteriores protegidos que enriquecen el acceso y el uso cotidiano de la vivienda.",
       },
-  
+    
       {
         title: "Torreón",
-  
+        icon: "Landmark",
+    
         description:
           "Un volumen vertical contiene la escalera interior y se convierte en una pieza reconocible dentro de la composición general de la casa.",
       },
@@ -1316,31 +1323,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Una gran cubierta que extiende la vivienda hacia el paisaje",
-  
+    
       description:
         "Casa Altamira se configura a partir de un volumen compacto protegido por una amplia cubierta inclinada. Su prolongación sobre las fachadas genera terrazas y espacios exteriores resguardados, ampliando la experiencia de la vivienda más allá de sus límites interiores y estableciendo una relación directa con el entorno.",
     },
-  
+    
     principles: [
       {
         title: "Cubierta",
-  
+        icon: "Triangle",
+    
         description:
           "La gran cubierta inclinada constituye el principal gesto arquitectónico de la vivienda. Su extensión genera aleros profundos que protegen las fachadas y permiten incorporar espacios exteriores cubiertos.",
       },
-  
+    
       {
         title: "Continuidad",
-  
+        icon: "Layers",
+    
         description:
           "La estructura y los cielos de madera permanecen visibles tanto en el interior como en las áreas exteriores, construyendo una continuidad material entre la vivienda y sus terrazas.",
       },
-  
+    
       {
         title: "Apertura",
-  
+        icon: "Expand",
+    
         description:
           "Los grandes paños vidriados conectan los espacios comunes con el exterior, favoreciendo la entrada de luz natural y ampliando visualmente el interior hacia el paisaje.",
       },
@@ -1438,40 +1448,44 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
-      title: "Habitar el paisaje",
-  
+    
+      title: "Amplitud bajo la cubierta",
+    
       description:
-        "El proyecto nace del desafío de recrear una vivienda a partir de una imagen de referencia entregada por el cliente. Su lenguaje clásico y de líneas simples permitió reinterpretar esa imagen y transformarla en una propuesta arquitectónica coherente con el programa y el entorno.",
+        "La vivienda se organiza a partir de espacios amplios y longitudinales, con especial énfasis en el área común. Los cielos altos y los tijerales inclinados construyen una espacialidad continua, mientras la estructura se resuelve buscando mantener la amplitud interior sin incorporar elementos que interrumpan el espacio.",
     },
-  
+    
     principles: [
       {
         title: "Amplitud",
-  
+        icon: "Maximize2",
+    
         description:
-          "El espacio común se plantea de manera amplia y longitudinal, favoreciendo la continuidad visual entre living, comedor y cocina.",
+          "El espacio común se desarrolla de manera amplia y longitudinal, favoreciendo la continuidad visual entre living, comedor y cocina.",
       },
-  
+    
       {
         title: "Altura",
-  
+        icon: "MoveUp",
+    
         description:
-          "Los cielos altos y los tijerales inclinados construyen la espacialidad principal de la vivienda, reforzando la sensación de amplitud interior.",
+          "Los cielos altos y la geometría inclinada de la cubierta amplifican la percepción del espacio y refuerzan el carácter del área común.",
       },
-  
+    
       {
         title: "Estructura",
-  
+        icon: "Triangle",
+    
         description:
-          "El principal desafío fue resolver el cielo de madera y los tijerales inclinados del espacio común sin incorporar pilares ni vigas metálicas visibles, utilizando una escuadría precisa para evitar una percepción estructural pesada.",
+          "Los tijerales y el cielo de madera se resuelven evitando pilares y vigas metálicas visibles, permitiendo que la estructura acompañe la espacialidad sin fragmentarla.",
       },
-  
+    
       {
         title: "Contraste",
-  
+        icon: "CircleHalf",
+    
         description:
-          "El tono oscuro del cielo de madera aporta calidez y contraste, reduciendo además la reflexión de la luz natural y de las luminarias interiores.",
+          "El tono oscuro del cielo de madera introduce profundidad y contraste en el interior, aportando calidez y reduciendo la reflexión de la luz natural y artificial.",
       },
     ],
   
@@ -1489,18 +1503,6 @@ export const architectureProjects = [
       {
         image: "/images/projects/casa-chucauco/planta.png",
         name: "Planta de arquitectura",
-      },
-      {
-        image: "/images/projects/casa-chucauco/emplazamiento.png",
-        name: "Emplazamiento y cubierta",
-      },
-      {
-        image: "/images/projects/casa-chucauco/elevaciones.png",
-        name: "Elevaciones",
-      },
-      {
-        image: "/images/projects/casa-chucauco/cortes.png",
-        name: "Cortes y detalle",
       },
     ],
   
@@ -1564,6 +1566,7 @@ export const architectureProjects = [
     ],
   
     images: [
+      "/images/projects/casa-tautau/portada.jpg",
       "/images/projects/casa-tautau/01.jpg",
       "/images/projects/casa-tautau/02.jpg",
       "/images/projects/casa-tautau/03.jpg",
@@ -1578,33 +1581,36 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
-      title: "Vivienda, trabajo y vida cotidiana",
-  
+    
+      title: "Habitar la pendiente",
+    
       description:
-        "El programa reúne los espacios tradicionales de una vivienda con recintos destinados al trabajo y a actividades complementarias. La incorporación de oficina, taller y lavadero amplía el programa doméstico y permite organizar distintas formas de uso dentro de una misma casa.",
+        "La vivienda se adapta a la pendiente mediante dos niveles que distribuyen el programa doméstico, los espacios de trabajo y las áreas comunes. Terrazas y circulaciones exteriores acompañan esta organización, extendiendo la vida cotidiana hacia el entorno.",
     },
-  
+    
     principles: [
       {
+        title: "Topografía",
+        icon: "Waves",
+    
+        description:
+          "La vivienda se desarrolla en dos niveles que responden a la pendiente del terreno, permitiendo distribuir el programa sin desvincular la casa de su entorno inmediato.",
+      },
+    
+      {
         title: "Programa",
-  
+        icon: "PanelsTopLeft",
+    
         description:
-          "La vivienda combina áreas comunes, dormitorios y servicios con espacios específicos para oficina y taller, incorporando actividades de trabajo dentro del programa residencial.",
+          "Dormitorios y áreas comunes conviven con oficina, taller y recintos de servicio, incorporando el trabajo y otras actividades cotidianas como parte integral de la vivienda.",
       },
-  
+    
       {
-        title: "Convivencia",
-  
+        title: "Exterior",
+        icon: "Trees",
+    
         description:
-          "Living, comedor y estar conforman el núcleo de los espacios compartidos, mientras los recintos privados y de trabajo responden a usos más específicos.",
-      },
-  
-      {
-        title: "Flexibilidad",
-  
-        description:
-          "La diversidad del programa permite que la casa responda simultáneamente a actividades domésticas, descanso, encuentro y trabajo.",
+          "Terrazas y circulaciones exteriores acompañan los distintos niveles de la casa, ampliando los espacios habitables y fortaleciendo su relación con el terreno.",
       },
     ],
   
@@ -1715,31 +1721,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Habitar entre volúmenes",
-  
+    
       description:
         "La vivienda se organiza a partir de la articulación de distintos volúmenes y niveles. Los espacios comunes se concentran en una planta abierta vinculada directamente con terrazas techadas, mientras los recintos privados se distribuyen en sectores de mayor independencia.",
     },
-  
+    
     principles: [
       {
-        title: "Relación con el exterior",
-  
+        title: "Exterior",
+        icon: "Trees",
+    
         description:
           "Las áreas comunes se prolongan hacia terrazas techadas y grandes aperturas, generando una transición gradual entre el interior de la vivienda y el paisaje.",
       },
-  
+    
       {
         title: "Espacialidad",
-  
+        icon: "Layers",
+    
         description:
           "Cocina, comedor y estar conforman un espacio continuo en el primer nivel. Los dormitorios y recintos de servicio se organizan en áreas más privadas, mientras el segundo nivel incorpora dormitorio, baño, vestidor y escritorio.",
       },
-  
+    
       {
         title: "Volumen",
-  
+        icon: "Box",
+    
         description:
           "La casa se compone mediante cuerpos de diferentes alturas y proporciones. El volumen de dos niveles se combina con sectores más bajos y terrazas cubiertas, generando una composición escalonada que responde también a la pendiente del terreno.",
       },
@@ -1771,14 +1780,6 @@ export const architectureProjects = [
       {
         name: "Elevación 2",
         image: "/images/projects/casa-canto-estero/elevacion_2.png",
-      },
-      {
-        name: "Elevación 3",
-        image: "/images/projects/casa-canto-estero/elevacion_3.png",
-      },
-      {
-        name: "Corte",
-        image: "/images/projects/casa-canto-estero/corte.png",
       },
     ],
   
@@ -1849,31 +1850,34 @@ export const architectureProjects = [
   
     concept: {
       eyebrow: "El proyecto",
-  
+    
       title: "Habitar lo esencial",
-  
+    
       description:
         "El proyecto concentra el programa doméstico en una superficie reducida, buscando aprovechar cada espacio sin perder la relación con el exterior. Una planta simple organiza los recintos interiores, mientras la cubierta se prolonga para generar una terraza protegida que amplía el espacio habitable hacia el paisaje.",
     },
-  
+    
     principles: [
       {
         title: "Compacidad",
-  
+        icon: "Minimize2",
+    
         description:
           "El programa se organiza en una planta contenida, reduciendo circulaciones y concentrando los recintos necesarios para la vida cotidiana.",
       },
-  
+    
       {
         title: "Extensión",
-  
+        icon: "MoveHorizontal",
+    
         description:
           "La terraza techada funciona como una prolongación del interior y genera un espacio intermedio protegido entre la vivienda y el jardín.",
       },
-  
+    
       {
         title: "Materialidad",
-  
+        icon: "Layers",
+    
         description:
           "La madera domina la envolvente y la estructura visible, reforzando el carácter cálido de la vivienda y su integración con el entorno natural.",
       },

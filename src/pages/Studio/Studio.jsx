@@ -15,6 +15,11 @@ const timeline = [
     text: "Estudios de bioconstrucción y técnicas constructivas alternativas.",
   },
   {
+    year: "2004 — 2009",
+    title: "Pirque, Metropolitana",
+    text: "Imparte cursos de bioconstrucción al mismo tiempo que desarrolla su práctica profesional en técnicas constructivas sustentables y aplica el diseño solar pasivo en sus diseños residenciales.",
+  },
+  {
     year: "2004 — 2015",
     title: "Young & Borlik Architects",
     text: "Experiencia en Palo Alto, California, en proyectos de arquitectura de autor y diseño a medida.",
@@ -27,7 +32,7 @@ const timeline = [
   {
     year: "2023",
     title: "Neurociencia aplicada a la arquitectura",
-    text: "Diplomado en la Universidad del Desarrollo.",
+    text: "Diplomado en la Universidad del Desarrollo, con tesis en establecimientos educacionales.",
   },
 ];
 

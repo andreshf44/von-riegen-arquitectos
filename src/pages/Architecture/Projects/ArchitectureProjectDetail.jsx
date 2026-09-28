@@ -17,6 +17,24 @@ import {
   Sun,
   Mountain,
   Leaf,
+  Maximize,
+  Minimize2,
+  Layers,
+  Waves,
+  PanelsTopLeft,
+  Trees,
+  Box,
+  Eye,
+  Triangle,
+  Maximize2,
+  Umbrella,
+  MoveUp,
+  MoveUpRight,
+  MoveHorizontal,
+  PanelTopOpen,
+  DoorOpen,
+  Landmark,
+  Expand,
 } from "lucide-react";
 
 import Navbar from "../../../components/layout/Navbar";
@@ -25,6 +43,30 @@ import Footer from "../../../components/layout/Footer";
 import { architectureProjects } from "../../../data/architectureProjects";
 
 import "./ArchitectureProjectDetail.css";
+
+const principleIcons = {
+  Sun,
+  Mountain,
+  Leaf,
+  Maximize,
+  Minimize2,
+  Layers,
+  Waves,
+  PanelsTopLeft,
+  Trees,
+  Box,
+  Eye,
+  Triangle,
+  Maximize2,
+  Umbrella,
+  MoveUp,
+  MoveUpRight,
+  MoveHorizontal,
+  PanelTopOpen,
+  DoorOpen,
+  Landmark,
+  Expand,
+};
 
 export default function ArchitectureProjectDetail() {
   const { slug } = useParams();
@@ -403,24 +445,21 @@ export default function ArchitectureProjectDetail() {
           {project.principles?.length > 0 && (
             <div className="project-detail__principles">
 
-              {project.principles.map(
-                (principle, index) => {
+              {project.principles.map((principle) => {
 
                   const PrincipleIcon =
-                    index === 0
-                      ? Sun
-                      : index === 1
-                      ? Mountain
-                      : Leaf;
+                    principleIcons[principle.icon];
 
                   return (
                     <article
                       key={`${project.slug}-${principle.title}`}
                     >
 
-                      <PrincipleIcon
-                        strokeWidth={1}
-                      />
+                      {PrincipleIcon && (
+                        <PrincipleIcon
+                          strokeWidth={1}
+                        />
+                      )}
 
                       <h3>
                         {principle.title}
