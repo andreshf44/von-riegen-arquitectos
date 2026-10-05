@@ -1,5 +1,9 @@
 /* src/pages/Contact/Contact.css */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .contact {
   min-height: 100vh;
   background: var(--color-background);

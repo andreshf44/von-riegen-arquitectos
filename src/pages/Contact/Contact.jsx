@@ -10,6 +10,14 @@ export default function Contact() {
   const [status, setStatus] = useState("idle");
   const [feedback, setFeedback] = useState("");
 
+  const focusContactForm = (event) => {
+    event.preventDefault();
+
+    document
+      .querySelector("#name")
+      ?.focus();
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -98,10 +106,8 @@ export default function Contact() {
               </span>
             </a>
 
-            <a href="mailto:daniela@vonriegenarquitectos.cl">
-              <span className="contact__info-icon">
-                ✉
-              </span>
+            <a href="#contact-form" onClick={focusContactForm}>
+              <span className="contact__info-icon">✉</span>
 
               <span>
                 <small>Email</small>
@@ -138,6 +144,7 @@ export default function Contact() {
         </div>
 
         <form
+          id="contact-form"
           className="contact__form"
           onSubmit={handleSubmit}
         >
