@@ -31,56 +31,66 @@ export default function ArchitectureProjects() {
 
   const filteredProjects = useMemo(() => {
     let result = [...architectureProjects];
-
-    /* FILTER */
-
+  
+    /* ========================================
+       TODOS
+       Mantiene exactamente el orden de la data
+    ======================================== */
+  
+    if (activeFilter === "Todos") {
+      return result;
+    }
+  
+    /* ========================================
+       FILTER
+    ======================================== */
+  
     if (activeFilter === "Viviendas") {
       result = result.filter(
         (project) => project.category === "Vivienda"
       );
     }
-
+  
     if (activeFilter === "Refugios") {
       result = result.filter(
         (project) => project.category === "Refugio"
       );
     }
-
+  
     if (activeFilter === "Proyectos") {
       result = result.filter(
         (project) => project.category === "Proyecto"
       );
     }
-
-    /* SORT */
-
+  
+    /* ========================================
+       SORT
+    ======================================== */
+  
     result.sort((a, b) => {
       if (sort === "recent") {
-        /*
-          Si todavía no tenemos año en alguno de los proyectos,
-          lo mandamos al final.
-        */
-        return (b.year ?? 0) - (a.year ?? 0);
-      }
-
-      if (sort === "oldest") {
-        /*
-          Los proyectos sin año también quedan al final.
-        */
         if (!a.year && !b.year) return 0;
         if (!a.year) return 1;
         if (!b.year) return -1;
-
-        return a.year - b.year;
+  
+        return Number(b.year) - Number(a.year);
       }
-
+  
+      if (sort === "oldest") {
+        if (!a.year && !b.year) return 0;
+        if (!a.year) return 1;
+        if (!b.year) return -1;
+  
+        return Number(a.year) - Number(b.year);
+      }
+  
       if (sort === "name") {
         return a.name.localeCompare(b.name);
       }
-
+  
       return 0;
     });
-
+  
     return result;
   }, [activeFilter, sort]);
 

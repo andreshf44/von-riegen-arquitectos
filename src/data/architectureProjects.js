@@ -4,7 +4,7 @@ export const architectureProjects = [
   {
     slug: "casa-los-riscos5",
       
-    name: "CASA LOS RISCOS",
+    name: "CASA LOS RISCOS V",
     category: "Vivienda",
     type: "Vivienda unifamiliar",
       
