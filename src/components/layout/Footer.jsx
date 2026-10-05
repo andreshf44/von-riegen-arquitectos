@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="footer__social">
           <a
-            href="#"
+            href="https://www.instagram.com/vonriegenarquitectos/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -86,12 +86,9 @@ export default function Footer() {
             IG
           </a>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
+          <a href="https://wa.me/56961244920?text=Hola%2C%20me%20gustaría%20conversar%20sobre%20un%20proyecto." 
+            target="_blank" 
+            rel="noreferrer">
             WA
           </a>
         </div>
