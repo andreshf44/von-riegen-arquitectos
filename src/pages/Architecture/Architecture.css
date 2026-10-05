@@ -963,7 +963,8 @@
   }
 
   .architecture__includes-image {
-    min-height: 260px;
+    min-height: auto;
+    height: auto;
   }
 
   /* EDUCATION */

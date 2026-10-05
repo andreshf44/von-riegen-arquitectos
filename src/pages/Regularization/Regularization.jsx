@@ -434,17 +434,10 @@ export default function Regularization() {
 
       <section className="regularization-cta">
 
-        <div className="regularization-cta__illustration">
-          <Leaf strokeWidth={0.8} />
-        </div>
-
         <h2>
           Regulariza tu propiedad
-          <br />
           y construye con tranquilidad.
         </h2>
-
-        <div className="regularization-cta__divider" />
 
         <p>
           Resolvemos tus dudas y te orientamos
@@ -452,13 +445,9 @@ export default function Regularization() {
           en el primer paso.
         </p>
 
-        <Link
-          to="/contacto"
-          className="regularization-cta__button"
-        >
-          Agendar asesoría
-
-          <ArrowRight strokeWidth={1.1} />
+        <Link to="/contacto" className="architecture__cta-button">
+          Agenda una asesoría
+          <span>→</span>
         </Link>
 
       </section>

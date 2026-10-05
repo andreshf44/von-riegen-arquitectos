@@ -1466,7 +1466,6 @@ export default function Education() {
 
         <h2>
           Investigamos para diseñar
-          <br />
           mejores espacios educativos.
         </h2>
 
@@ -1476,15 +1475,9 @@ export default function Education() {
           en mente, conversemos.
         </p>
 
-        <Link
-          to="/contacto"
-          className="education-cta__button"
-        >
-
+        <Link to="/contacto" className="architecture__cta-button">
           Conversemos
-
-          <ArrowRight strokeWidth={1.1} />
-
+          <span>→</span>
         </Link>
 
       </section>

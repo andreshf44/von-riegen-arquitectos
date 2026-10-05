@@ -202,25 +202,20 @@ export default function ArchitectureProjects() {
       <section className="projects-cta">
         <h2>
           ¿Tienes un proyecto
-          <br />
           en mente?
         </h2>
 
         <p>
-          Cuéntanos sobre tu terreno, tu proyecto
+          Cuéntanos sobre tu terreno, tus necesidades
           <br />
           y cómo imaginas habitarlo.
           <br />
           Te ayudamos a hacerlo realidad.
         </p>
 
-        <Link
-          to="/contacto"
-          className="projects-cta__button"
-        >
+        <Link to="/contacto" className="architecture__cta-button">
           Conversemos
-
-          <ArrowRight strokeWidth={1.1} />
+          <span>→</span>
         </Link>
       </section>
 

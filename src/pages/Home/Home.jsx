@@ -38,17 +38,17 @@ const services = [
 const opinions = [
   {
     number: "01",
-    commentary: "Daniela brinda un servicio de arquitectura de alta calidad, destacando por su profesionalismo y compromiso. Se involucra personalmente en cada actividad y tarea del proyecto, realizando un seguimiento permanente de las tareas y manteniéndose siempre disponible para resolver consultas. Su dedicación y la capacidad de gestión,  generan confianza y garantizan una experiencia muy satisfactoria.",
-    title: "Rodrigo Lopez",
-    subtitle: "Casa Lopez",
-    url: "/images/home/opinions/opinion-01.png",
-  },
-  {
-    number: "02",
     commentary:"Con Daniela sentí que se logró una mezcla perfecta entre lo que yo tenía en mente y sus propuestas. En otras palabras supo leer al cliente y plasmar tanto en diseño, habitabilidad, luz y eficiencia energética un resultado equilibrado que me dejó muy satisfecho.",
     title: "Jaime Piedra",
     subtitle: "Casa en Los Riscos",
     url: "/images/home/opinions/opinion-02.png",
+  },
+  {
+    number: "02",
+    commentary: "Daniela brinda un servicio de arquitectura de alta calidad, destacando por su profesionalismo y compromiso. Se involucra personalmente en cada actividad y tarea del proyecto, realizando un seguimiento permanente de las tareas y manteniéndose siempre disponible para resolver consultas. Su dedicación y la capacidad de gestión,  generan confianza y garantizan una experiencia muy satisfactoria.",
+    title: "Rodrigo Lopez",
+    subtitle: "Casa Lopez",
+    url: "/images/home/opinions/opinion-01.png",
   },
   {
     number: "03",

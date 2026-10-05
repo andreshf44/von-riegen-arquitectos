@@ -1029,136 +1029,140 @@
   }
   
   
-  /* =========================================================
-     CTA
-  ========================================================= */
-  
-  .land-division-cta {
-    min-height: 165px;
-  
-    padding:
-      30px
-      var(--page-padding);
-  
-    display: grid;
-  
-    grid-template-columns:
-      115px
-      1.1fr
-      1px
-      0.8fr
-      auto;
-  
-    align-items: center;
-  
-    gap: 34px;
-  
-    background:
-      linear-gradient(
-        90deg,
-        #ebe7df,
-        #f3f1eb
-      );
-  }
-  
-  .land-division-cta__illustration {
-    display: grid;
-  
-    place-items: center;
-  }
-  
-  .land-division-cta__illustration svg {
-    width: 65px;
-    height: 65px;
-  
-    color:
-      rgba(47, 47, 44, 0.42);
-  }
-  
-  .land-division-cta h2 {
-    margin: 0;
-  
-    font-family:
-      var(--font-serif);
-  
-    font-size:
-      clamp(2.4rem, 3vw, 3.8rem);
-  
-    font-weight: 400;
-  
-    line-height: 0.98;
-  
-    letter-spacing:
-      -0.03em;
-  }
-  
-  .land-division-cta__divider {
-    width: 1px;
-    height: 66px;
-  
-    background:
-      rgba(47, 47, 44, 0.16);
-  }
-  
-  .land-division-cta p {
-    margin: 0;
-  
-    color:
-      rgba(47, 47, 44, 0.68);
-  
-    font-size: 0.68rem;
-  
-    line-height: 1.65;
-  }
-  
-  .land-division-cta__button {
-    min-width: 205px;
-  
-    padding:
-      16px
-      18px;
-  
-    display: flex;
-  
-    align-items: center;
-  
-    justify-content: space-between;
-  
-    gap: 30px;
-  
-    border:
-      1px solid rgba(47, 47, 44, 0.42);
-  
-    background:
-      rgba(243, 241, 235, 0.72);
-  
-    color: inherit;
-  
-    text-decoration: none;
-  
-    font-size: 0.58rem;
-  
-    text-transform: uppercase;
-  
-    letter-spacing: 0.13em;
-  
-    transition:
-      background 180ms ease,
-      border-color 180ms ease;
-  }
-  
-  .land-division-cta__button:hover {
-    background:
-      rgba(255, 255, 255, 0.58);
-  
-    border-color:
-      rgba(47, 47, 44, 0.8);
-  }
-  
-  .land-division-cta__button svg {
-    width: 16px;
-    height: 16px;
-  }
+/* ========================================
+  CTA — VOLCÁN + ARAUCARIAS
+======================================== */
+
+.land-division-cta {
+  position: relative;
+  min-height: 370px;
+  padding: 40px var(--page-padding);
+  display: grid;
+  grid-template-columns: 1fr 0.8fr auto;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+  background-color: #f3f1eb;
+  background-image: url(/images/education/cta-lake-volcan.png);
+  background-size: cover;
+  background-position: center 76%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+/*
+  Integración suave con el fondo.
+  El paisaje sigue visible.
+*/
+
+.land-division-cta::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 241, 235, 0.22) 0%,
+      rgba(243, 241, 235, 0.08) 34%,
+      rgba(243, 241, 235, 0.03) 65%,
+      rgba(243, 241, 235, 0.06) 100%
+    );
+
+  pointer-events: none;
+}
+
+.land-division-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
+
+.land-division-cta h2 {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: var(--font-serif);
+  font-size: clamp(2.7rem, 3.5vw, 4.3rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+
+  color: var(--color-text);
+}
+
+/* CENTRAL TEXT */
+
+.land-division-cta > p {
+  max-width: 340px;
+
+  margin: 0;
+
+  padding: 20px 24px;
+
+  color: #55524c;
+
+  background: rgba(245, 242, 235, 0.67);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(3px);
+
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* BUTTON */
+
+.architecture__cta-button {
+  justify-self: start;
+
+  width: 205px;
+  min-width: 205px;
+
+  padding: 17px 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(34, 33, 30, 0.52);
+
+  background: rgba(245, 242, 235, 0.72);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  color: var(--color-text);
+
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.architecture__cta-button span:last-child {
+  font-size: 1rem;
+
+  transition: transform 200ms ease;
+}
+
+.architecture__cta-button:hover {
+  background: rgba(245, 242, 235, 0.96);
+  border-color: var(--color-text);
+
+  transform: translateY(-1px);
+}
+
+.architecture__cta-button:hover span:last-child {
+  transform: translateX(5px);
+}
   
   
   /* =========================================================

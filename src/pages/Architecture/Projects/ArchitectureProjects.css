@@ -1,9 +1,9 @@
 .projects-page {
-    min-height: 100vh;
+  min-height: 100vh;
   
-    background: var(--color-background);
-    color: var(--color-text);
-  }
+  background: var(--color-background);
+  color: var(--color-text);
+}
   
   /* ========================================
      SHARED
@@ -423,159 +423,144 @@
     width: 16px;
   }
   
-  /* ========================================
-     CTA
-  ======================================== */
-  
-  .projects-cta {
-    position: relative;
-  
-    min-height: 280px;
-  
-    padding:
-      45px
-      var(--page-padding);
-  
-    display: grid;
-  
-    grid-template-columns:
-      1.05fr
-      0.9fr
-      0.55fr;
-  
-    gap:
-      clamp(45px, 5vw, 90px);
-  
-    align-items: center;
-  
-    background-color:
-      #f3f1eb;
-  
-    background-image:
-      url("/images/architecture/cta-araucarias-volcan.png");
-  
-    background-repeat:
-      no-repeat;
-  
-    background-size:
-      cover;
-  
-    background-position:
-      center 58%;
-  
-    border-top:
-      1px solid
-      var(--color-line);
-  
-    overflow: hidden;
-  }
-  
-  .projects-cta::before {
-    content: "";
-  
-    position: absolute;
-  
-    inset: 0;
-  
-    background:
-      linear-gradient(
-        90deg,
-        rgba(243, 241, 235, 0.22) 0%,
-        rgba(243, 241, 235, 0.08) 34%,
-        rgba(243, 241, 235, 0.03) 65%,
-        rgba(243, 241, 235, 0.06) 100%
-      );
-  
-    pointer-events: none;
-  }
-  
-  .projects-cta > * {
-    position: relative;
-  
-    z-index: 1;
-  }
-  
-  .projects-cta h2 {
-    max-width: 500px;
-  
-    margin: 0;
-  
-    font-family:
-      var(--font-serif);
-  
-    font-size:
-      clamp(2.7rem, 3.5vw, 4.3rem);
-  
-    font-weight: 400;
-  
-    line-height: 0.92;
-  
-    letter-spacing:
-      -0.035em;
-  }
-  
-  .projects-cta p {
-    max-width: 340px;
-  
-    margin: 0;
-  
-    padding:
-      20px
-      24px;
-  
-    color:
-      #55524c;
-  
-    background:
-      rgba(245, 242, 235, 0.67);
-  
-    backdrop-filter:
-      blur(3px);
-  
-    font-size: 0.82rem;
-  
-    line-height: 1.75;
-  }
-  
-  .projects-cta__button {
-    width: 205px;
-  
-    padding:
-      17px
-      19px;
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-    border:
-      1px solid
-      rgba(34, 33, 30, 0.52);
-  
-    background:
-      rgba(245, 242, 235, 0.72);
-  
-    backdrop-filter:
-      blur(4px);
-  
-    color: inherit;
-  
-    font-size: 0.62rem;
-  
-    text-transform: uppercase;
-  
-    letter-spacing: 0.14em;
-  }
+/* ========================================
+   CTA — VOLCÁN + ARAUCARIAS
+======================================== */
 
-  .projects-cta__button:hover{
-    background: rgba(245, 242, 235, 0.96);
-    border-color: var(--color-text);
-    transform: translateY(-1px);
-  }
+.projects-cta {
+  position: relative;
+  min-height: 370px;
+  padding: 40px var(--page-padding);
+  display: grid;
+  grid-template-columns: 1fr 0.8fr auto;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+  background-color: #f3f1eb;
+  background-image: url(/images/education/cta-lake-volcan.png);
+  background-size: cover;
+  background-position: center 76%;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--color-line);
+  overflow: hidden;
+}
+
+/*
+  Integración suave con el fondo.
+  El paisaje sigue visible.
+*/
+
+.projects-cta::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 241, 235, 0.22) 0%,
+      rgba(243, 241, 235, 0.08) 34%,
+      rgba(243, 241, 235, 0.03) 65%,
+      rgba(243, 241, 235, 0.06) 100%
+    );
+
+  pointer-events: none;
+}
+
+.projects-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
+
+.projects-cta h2 {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-family: var(--font-serif);
+  font-size: clamp(2.7rem, 3.5vw, 4.3rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+
+  color: var(--color-text);
+}
+
+/* CENTRAL TEXT */
+
+.projects-cta > p {
+  max-width: 340px;
+
+  margin: 0;
+
+  padding: 20px 24px;
+
+  color: #55524c;
+
+  background: rgba(245, 242, 235, 0.67);
+
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(3px);
+
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* BUTTON */
+
+.architecture__cta-button {
+  justify-self: start;
+
+  width: 205px;
+  min-width: 205px;
+
+  padding: 17px 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(34, 33, 30, 0.52);
+
+  background: rgba(245, 242, 235, 0.72);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  color: var(--color-text);
+
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.architecture__cta-button span:last-child {
+  font-size: 1rem;
+
+  transition: transform 200ms ease;
+}
+
+.architecture__cta-button:hover {
+  background: rgba(245, 242, 235, 0.96);
+  border-color: var(--color-text);
+
+  transform: translateY(-1px);
+}
+
+.architecture__cta-button:hover span:last-child {
+  transform: translateX(5px);
+}
   
-  /* ========================================
-     TABLET
-  ======================================== */
+/* ========================================
+  TABLET
+======================================== */
   
   @media (max-width: 1000px) {
     .projects-grid {

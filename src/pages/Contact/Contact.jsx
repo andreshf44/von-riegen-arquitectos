@@ -26,30 +26,30 @@ export default function Contact() {
           </p>
 
           <div className="contact__info">
-            <a href="https://wa.me/56912345678" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/56961244920?text=Hola%2C%20me%20gustaría%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noreferrer">
               <span className="contact__info-icon">◌</span>
 
               <span>
                 <small>WhatsApp</small>
-                +56 9 1234 5678
+                +56 9 6124 4920
               </span>
             </a>
 
-            <a href="mailto:hola@vonriegenarquitectos.cl">
+            <a href="daniela@vonriegenarquitectos.cl">
               <span className="contact__info-icon">✉</span>
 
               <span>
                 <small>Email</small>
-                hola@vonriegenarquitectos.cl
+                daniela@vonriegenarquitectos.cl
               </span>
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/vonriegenarquitectos/" target="_blank" rel="noreferrer">
               <span className="contact__info-icon">◎</span>
 
               <span>
                 <small>Instagram</small>
-                @vonriegen.arquitectos
+                @vonriegenarquitectos
               </span>
             </a>
 

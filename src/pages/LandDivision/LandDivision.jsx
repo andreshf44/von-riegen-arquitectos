@@ -714,22 +714,10 @@ export default function LandDivision() {
 
       <section className="land-division-cta">
 
-        <div className="land-division-cta__illustration">
-
-          <Trees strokeWidth={0.7} />
-
-        </div>
-
-
         <h2>
           Cada terreno tiene
-          <br />
           un potencial único.
         </h2>
-
-
-        <div className="land-division-cta__divider" />
-
 
         <p>
           Te ayudamos a descubrirlo y
@@ -737,14 +725,9 @@ export default function LandDivision() {
           convertirlo en nuevas oportunidades.
         </p>
 
-
-        <Link
-          to="/contacto"
-          className="land-division-cta__button"
-        >
+        <Link to="/contacto" className="architecture__cta-button">
           Agenda una asesoría
-
-          <ArrowRight strokeWidth={1.1} />
+          <span>→</span>
         </Link>
 
       </section>
