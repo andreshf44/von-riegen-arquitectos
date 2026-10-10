@@ -16,32 +16,51 @@ const clean = (value, maxLength) => {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
 
+  // Solo permitir solicitudes POST
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
+
     return res.status(405).json({
       error: "Método no permitido.",
     });
   }
 
   try {
-    if (!req.body || typeof req.body !== "object" || Array.isArray(req.body)) {
+    // Validar el cuerpo de la solicitud
+    if (
+      !req.body ||
+      typeof req.body !== "object" ||
+      Array.isArray(req.body)
+    ) {
       return res.status(400).json({
         error: "Solicitud inválida.",
       });
     }
 
+    // Honeypot: detectar formularios completados por bots
+    // Si el campo oculto contiene información, no enviar correo
+    if (req.body.website) {
+      return res.status(200).json({
+        success: true,
+        message: "Mensaje recibido.",
+      });
+    }
+
+    // Limpiar y limitar los datos recibidos
     const name = clean(req.body.name, 100);
     const email = clean(req.body.email, 254);
     const phone = clean(req.body.phone, 30);
     const service = clean(req.body.service, 100);
     const message = clean(req.body.message, 3000);
 
+    // Validar campos obligatorios
     if (!name || !email || !message) {
       return res.status(400).json({
         error: "Nombre, email y mensaje son obligatorios.",
       });
     }
 
+    // Validar formato básico del correo
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
@@ -50,6 +69,7 @@ export default async function handler(req, res) {
       });
     }
 
+    // Comprobar configuración de Resend
     if (!process.env.RESEND_API_KEY) {
       console.error("RESEND_API_KEY no configurada.");
 
@@ -58,45 +78,67 @@ export default async function handler(req, res) {
       });
     }
 
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Von Riegen Web <contacto@vonriegenarquitectos.cl>",
-        to: ["daniela@vonriegenarquitectos.cl"],
-        reply_to: email,
-        subject: `Nueva consulta web — ${name.replace(/[\r\n]/g, " ")}`,
-        html: `
-          <h2>Nueva consulta desde Von Riegen Arquitectos</h2>
+    // Enviar la consulta por Resend
+    const response = await fetch(
+      "https://api.resend.com/emails",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Von Riegen Web <contacto@vonriegenarquitectos.cl>",
 
-          <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Teléfono:</strong> ${escapeHtml(phone || "No indicado")}</p>
-          <p><strong>Servicio:</strong> ${escapeHtml(service || "No indicado")}</p>
+          to: ["daniela@vonriegenarquitectos.cl"],
 
-          <hr>
+          reply_to: email,
 
-          <p><strong>Mensaje:</strong></p>
-          <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
-        `,
-      }),
-    });
+          subject: `Nueva consulta web — ${name.replace(/[\r\n]/g, " ")}`,
 
+          html: `
+            <h2>Nueva consulta desde Von Riegen Arquitectos</h2>
+
+            <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+
+            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+
+            <p><strong>Teléfono:</strong> ${escapeHtml(
+              phone || "No indicado"
+            )}</p>
+
+            <p><strong>Servicio:</strong> ${escapeHtml(
+              service || "No indicado"
+            )}</p>
+
+            <hr>
+
+            <p><strong>Mensaje:</strong></p>
+
+            <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
+          `,
+        }),
+      }
+    );
+
+    // Manejar errores sin exponer información interna
     if (!response.ok) {
-      console.error("Error al enviar correo con Resend:", response.status);
+      console.error(
+        "Error al enviar correo con Resend:",
+        response.status
+      );
 
       return res.status(502).json({
         error: "No se pudo enviar el mensaje. Inténtalo nuevamente.",
       });
     }
 
+    // Respuesta exitosa
     return res.status(200).json({
       success: true,
       message: "Mensaje enviado correctamente.",
     });
+
   } catch (error) {
     console.error("Error en API de contacto:", error);
 
