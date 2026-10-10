@@ -23,14 +23,11 @@ export default async function handler(req, res) {
         },
   
         body: JSON.stringify({
-          // Remitente temporal para la prueba
-          from: "Von Riegen Web <onboarding@resend.dev>",
+          // Remitente corporativo verificado en Resend
+          from: "Von Riegen Web <contacto@vonriegenarquitectos.cl>",
   
-          // Primero probaremos con tu correo
-          to: ["andreshf@live.cl"],
-  
-          // Cuando el dominio esté configurado:
-          // to: ["daniela@vonriegenarquitectos.cl"],
+          // Correo que recibirá las consultas del formulario
+          to: ["daniela@vonriegenarquitectos.cl"],
   
           reply_to: email,
   
