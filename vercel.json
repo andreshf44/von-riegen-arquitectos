@@ -1,8 +1,13 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    { "source": "/contacto", "destination": "/index.html" },
+    { "source": "/estudio", "destination": "/index.html" },
+    { "source": "/arquitectura", "destination": "/index.html" },
+    { "source": "/arquitectura/enfoque", "destination": "/index.html" },
+    { "source": "/arquitectura/educacion", "destination": "/index.html" },
+    { "source": "/arquitectura/proyectos", "destination": "/index.html" },
+    { "source": "/arquitectura/proyectos/:slug", "destination": "/index.html" },
+    { "source": "/regularizacion", "destination": "/index.html" },
+    { "source": "/division-predios", "destination": "/index.html" }
+  ]
+}

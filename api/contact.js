@@ -1,4 +1,6 @@
 
+import nodemailer from "nodemailer";
+
 const escapeHtml = (value) =>
   String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -16,17 +18,14 @@ const clean = (value, maxLength) => {
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
 
-  // Solo permitir solicitudes POST
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
-
     return res.status(405).json({
       error: "Método no permitido.",
     });
   }
 
   try {
-    // Validar el cuerpo de la solicitud
     if (
       !req.body ||
       typeof req.body !== "object" ||
@@ -37,8 +36,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // Honeypot: detectar formularios completados por bots
-    // Si el campo oculto contiene información, no enviar correo
+    // Honeypot contra bots
     if (req.body.website) {
       return res.status(200).json({
         success: true,
@@ -46,21 +44,18 @@ export default async function handler(req, res) {
       });
     }
 
-    // Limpiar y limitar los datos recibidos
     const name = clean(req.body.name, 100);
     const email = clean(req.body.email, 254);
     const phone = clean(req.body.phone, 30);
     const service = clean(req.body.service, 100);
     const message = clean(req.body.message, 3000);
 
-    // Validar campos obligatorios
     if (!name || !email || !message) {
       return res.status(400).json({
         error: "Nombre, email y mensaje son obligatorios.",
       });
     }
 
-    // Validar formato básico del correo
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
@@ -69,81 +64,77 @@ export default async function handler(req, res) {
       });
     }
 
-    // Comprobar configuración de Resend
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY no configurada.");
+    const {
+      SMTP_HOST,
+      SMTP_PORT,
+      SMTP_USER,
+      SMTP_PASSWORD,
+    } = process.env;
+
+    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASSWORD) {
+      console.error("Configuración SMTP incompleta.");
 
       return res.status(500).json({
         error: "Servicio de contacto no disponible.",
       });
     }
 
-    // Enviar la consulta por Resend
-    const response = await fetch(
-      "https://api.resend.com/emails",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "Von Riegen Web <contacto@vonriegenarquitectos.cl>",
+    const port = Number(SMTP_PORT);
 
-          to: ["daniela@vonriegenarquitectos.cl"],
+    if (!Number.isInteger(port) || port < 1 || port > 65535) {
+      console.error("Puerto SMTP inválido.");
 
-          reply_to: email,
-
-          subject: `Nueva consulta web — ${name.replace(/[\r\n]/g, " ")}`,
-
-          html: `
-            <h2>Nueva consulta desde Von Riegen Arquitectos</h2>
-
-            <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
-
-            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-
-            <p><strong>Teléfono:</strong> ${escapeHtml(
-              phone || "No indicado"
-            )}</p>
-
-            <p><strong>Servicio:</strong> ${escapeHtml(
-              service || "No indicado"
-            )}</p>
-
-            <hr>
-
-            <p><strong>Mensaje:</strong></p>
-
-            <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
-          `,
-        }),
-      }
-    );
-
-    // Manejar errores sin exponer información interna
-    if (!response.ok) {
-      console.error(
-        "Error al enviar correo con Resend:",
-        response.status
-      );
-
-      return res.status(502).json({
-        error: "No se pudo enviar el mensaje. Inténtalo nuevamente.",
+      return res.status(500).json({
+        error: "Servicio de contacto no disponible.",
       });
     }
 
-    // Respuesta exitosa
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port,
+      secure: port === 465,
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASSWORD,
+      },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
+    });
+
+    await transporter.sendMail({
+      from: {
+        name: "Von Riegen Web",
+        address: SMTP_USER,
+      },
+      to: "daniela@vonriegenarquitectos.cl",
+      replyTo: email,
+      subject: `Nueva consulta web — ${name.replace(/[\r\n]/g, " ")}`,
+      html: `
+        <h2>Nueva consulta desde Von Riegen Arquitectos</h2>
+
+        <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Teléfono:</strong> ${escapeHtml(phone || "No indicado")}</p>
+        <p><strong>Servicio:</strong> ${escapeHtml(service || "No indicado")}</p>
+
+        <hr>
+
+        <p><strong>Mensaje:</strong></p>
+        <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
+      `,
+    });
+
     return res.status(200).json({
       success: true,
       message: "Mensaje enviado correctamente.",
     });
 
   } catch (error) {
-    console.error("Error en API de contacto:", error);
+    console.error("Error al enviar correo del formulario:", error);
 
-    return res.status(500).json({
-      error: "Error interno del servidor.",
+    return res.status(502).json({
+      error: "No se pudo enviar el mensaje. Inténtalo nuevamente.",
     });
   }
 }
