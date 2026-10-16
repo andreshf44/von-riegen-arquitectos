@@ -71,14 +71,17 @@ The current production integration does not depend on a third-party email API pr
 
 ## Security Considerations
 
-The project includes measures designed to reduce automated submissions and protect the contact workflow.
+The contact form includes server-side validation and anti-abuse measures to improve reliability and reduce common security risks.
 
-- **Honeypot protection:** an anti-spam mechanism implemented in the contact API.
+- **Honeypot protection:** A hidden form field helps identify automated submissions. Requests that populate this field receive a successful response without triggering email delivery.
+- **Input validation:** Required fields, email format, and maximum field lengths are validated server-side.
+- **HTML escaping:** User-provided content is escaped before being included in the HTML email.
+- **HTTP method restriction:** The contact endpoint only accepts POST requests.
 - **Rate limiting:** Vercel Firewall is configured to limit `/api/contact` to five requests per IP address within ten minutes, returning HTTP 429 when the limit is exceeded.
-- **Server-side credentials:** SMTP authentication is handled through private environment variables rather than frontend code.
-- **Repository security:** GitHub security features are enabled to support dependency review, code analysis, and secret detection.
+- **Environment variables:** SMTP credentials are stored in server-side environment variables rather than exposed in frontend code.
+- **Repository security:** GitHub security features support code analysis, dependency review, and secret detection.
 
-These measures reduce certain risks but do not guarantee complete protection against abuse.
+These measures help reduce common risks but do not guarantee complete protection against abuse.
 
 ## Deployment
 
