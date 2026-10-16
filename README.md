@@ -25,18 +25,25 @@ The implementation focuses on responsive interfaces, usability, and connecting t
 ## Tech Stack
 
 **Frontend**
-- JavaScript
-- HTML and CSS
-- [Confirm framework and additional libraries from package.json]
+- React 19
+- JavaScript (ES Modules)
+- React Router 7
+- HTML5 & CSS3
+- Lucide React
 
 **Backend & Integrations**
 - Vercel Serverless Functions
+- Nodemailer
 - Hostinger SMTP
 
-**Infrastructure & Development**
-- Git and GitHub
+**Development Tools**
+- Vite 8
+- ESLint
+- Git & GitHub
+
+**Deployment & Infrastructure**
 - Vercel
-- NIC Chile (domain registration)
+- Custom domain managed through NIC Chile
 
 ## Contact Form Architecture
 
@@ -81,11 +88,52 @@ https://www.vonriegenarquitectos.cl/
 
 The source code is maintained in GitHub, with deployment managed through the project's Vercel configuration.
 
+
 ## Local Development
 
-Local setup instructions will be added after confirming the project's package scripts and required environment variable names.
+### Prerequisites
 
-SMTP credentials and other sensitive configuration values must never be committed to the repository.
+- Node.js and npm
+- Git
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/andreshf44/von-riegen-arquitectos.git
+cd von-riegen-arquitectos
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+### Environment Configuration
+
+The contact form requires server-side SMTP configuration.
+
+Keep SMTP credentials in private environment variables. Never commit credentials or `.env` files containing secrets to the repository.
+
+Local testing of the contact API may require a compatible serverless development environment.
+
 
 ## Project Status
 
