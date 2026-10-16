@@ -1,101 +1,101 @@
+
 # Von Riegen Arquitectos
 
-Sitio web corporativo de **Von Riegen Arquitectos**, estudio de arquitectura ubicado en Pucón, Región de La Araucanía, Chile.
+A responsive website developed for Von Riegen Arquitectos, an architecture studio based in Pucón, Chile.
 
-**Sitio web:** https://vonriegenarquitectos.cl
+The project combines a clear visual experience with functional features for showcasing architectural work and receiving inquiries through a secure server-side contact workflow.
 
-## Descripción
+**[View Live Website →](https://www.vonriegenarquitectos.cl/)**
 
-Plataforma web orientada a presentar los servicios del estudio, sus proyectos y facilitar el contacto con potenciales clientes mediante un formulario de consultas, WhatsApp y correo electrónico.
+## Overview
 
-## Tecnologías
+The website was developed to establish a digital presence for the architecture studio, present its projects, and make it easier for potential clients to get in touch.
 
-- React
-- Vite
+The implementation focuses on responsive interfaces, usability, and connecting the frontend experience with reliable backend services.
+
+## Key Features
+
+- Responsive layouts for desktop and mobile devices.
+- Architectural project presentation with visual content.
+- Contact form connected to a serverless API endpoint.
+- Email delivery through an authenticated SMTP service.
+- Anti-spam and request-limiting measures for the contact endpoint.
+- Production deployment with a custom domain.
+
+## Tech Stack
+
+**Frontend**
 - JavaScript
-- CSS
-- Vercel (hosting y despliegue)
-- GitHub (control de versiones)
-- Resend (envío de correos desde el formulario)
-- Hostinger (correo corporativo)
+- HTML and CSS
+- [Confirm framework and additional libraries from package.json]
 
-## Estructura principal
+**Backend & Integrations**
+- Vercel Serverless Functions
+- Hostinger SMTP
 
-- `src/`: componentes, páginas, estilos y recursos de la aplicación.
-- `public/`: imágenes, favicon y archivos públicos.
-- `api/contact.js`: endpoint del formulario de contacto.
-- `index.html`: documento HTML principal.
-- `vercel.json`: configuración de despliegue.
+**Infrastructure & Development**
+- Git and GitHub
+- Vercel
+- NIC Chile (domain registration)
 
-## Desarrollo local
+## Contact Form Architecture
 
-Requisitos: Node.js y npm.
+The contact form uses a server-side workflow to process inquiries without exposing SMTP credentials in the browser.
 
-```bash
-npm install
-npm run dev
+```text
+Website Contact Form
+         |
+         v
+Vercel API (/api/contact)
+         |
+         v
+Request Processing
+         |
+         v
+Hostinger SMTP
+         |
+         v
+Corporate Email Inbox
 ```
 
-Para generar una versión de producción:
+The API receives the contact request and uses Hostinger's SMTP service to deliver the notification to the studio's corporate email account.
 
-```bash
-npm run build
-```
+The current production integration does not depend on a third-party email API provider.
 
-## Formulario de contacto
+## Security Considerations
 
-El formulario envía solicitudes mediante `POST /api/contact`.
+The project includes measures designed to reduce automated submissions and protect the contact workflow.
 
-Flujo:
+- **Honeypot protection:** an anti-spam mechanism implemented in the contact API.
+- **Rate limiting:** Vercel Firewall is configured to limit `/api/contact` to five requests per IP address within ten minutes, returning HTTP 429 when the limit is exceeded.
+- **Server-side credentials:** SMTP authentication is handled through private environment variables rather than frontend code.
+- **Repository security:** GitHub security features are enabled to support dependency review, code analysis, and secret detection.
 
-1. El visitante completa el formulario.
-2. React envía los datos al endpoint de Vercel.
-3. El servidor valida los datos y procesa la solicitud.
-4. Resend envía la notificación al correo corporativo.
-5. Hostinger recibe el mensaje, que puede consultarse desde su webmail o Gmail mediante POP3.
+These measures reduce certain risks but do not guarantee complete protection against abuse.
 
-### Seguridad
+## Deployment
 
-- Validación de campos obligatorios y formato de email.
-- Límites de longitud de los datos.
-- Escape de contenido HTML.
-- Campo honeypot para reducir envíos automatizados.
-- Rate limiting en Vercel Firewall: 5 solicitudes cada 600 segundos por IP para `/api/contact`.
-- Credencial de Resend almacenada en la variable de entorno `RESEND_API_KEY`.
+The website is deployed on **Vercel** and uses the custom domain:
 
-**Importante:** nunca subir contraseñas, credenciales ni claves API al repositorio.
+https://www.vonriegenarquitectos.cl/
 
-## Infraestructura
+The source code is maintained in GitHub, with deployment managed through the project's Vercel configuration.
 
-| Servicio | Responsabilidad |
-|---|---|
-| NIC Chile | Registro del dominio |
-| Vercel | Hosting, DNS, despliegue y funciones |
-| GitHub | Código fuente y versiones |
-| Hostinger | Correo corporativo |
-| Resend | Notificaciones del formulario |
-| Gmail | Consulta y envío de correo mediante POP3/SMTP |
+## Local Development
 
-## Despliegue
+Local setup instructions will be added after confirming the project's package scripts and required environment variable names.
 
-El repositorio está conectado a Vercel. Los cambios incorporados a la rama `main` generan nuevos despliegues automáticamente.
+SMTP credentials and other sensitive configuration values must never be committed to the repository.
 
-Antes de publicar modificaciones importantes, comprobar el funcionamiento de la navegación, las imágenes y el formulario de contacto.
+## Project Status
 
-## Mantenimiento
+**Production**
 
-- Mantener actualizadas las dependencias del proyecto.
-- Revisar periódicamente los registros de errores de Vercel.
-- Comprobar que las consultas del formulario lleguen correctamente.
-- Mantener habilitada la autenticación de dos factores en las cuentas administrativas.
-- Revisar los permisos de acceso a GitHub, Vercel, Hostinger y el dominio.
+The contact form was successfully tested on October 16, 2026, with messages received through the configured email workflow.
 
-## Administración
+## Developer
 
-El sitio web y el correo corporativo deben permanecer bajo cuentas autorizadas por la propietaria del estudio.
+**Andrés Herrera**  
+Frontend Developer · JavaScript · TypeScript · UX/UI
 
-Las credenciales y los accesos administrativos se gestionan de forma privada y no se documentan en este repositorio.
-
----
-
-**Von Riegen Arquitectos — Pucón, Chile**
+[Portfolio](https://andresenrique.com) · [LinkedIn](https://www.linkedin.com/in/andres-herrera-frey-b4879335/) · [GitHub](https://github.com/andreshf44)
