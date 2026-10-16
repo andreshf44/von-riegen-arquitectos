@@ -542,7 +542,7 @@
     }
   
     .home__intro h1 {
-      font-size: clamp(3.3rem, 17vw, 5rem);
+      font-size: clamp(3.3rem, 15vw, 5rem);
     }
   
     .home__drawing {

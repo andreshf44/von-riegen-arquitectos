@@ -212,6 +212,22 @@ export default function ArchitectureProjectDetail() {
     );
   };
 
+  
+  const handleShareProject = () => {
+
+    const projectUrl = `${window.location.origin}/arquitectura/proyectos/${project.slug}`;
+
+    const message = `Te comparto este proyecto de Von Riegen Arquitectos:
+
+    ${project.name}
+    ${projectUrl}`;
+
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
+
   return (
     <main className="project-detail-page">
       <Navbar variant="full" />
@@ -300,14 +316,17 @@ export default function ArchitectureProjectDetail() {
           {/* ========================================
               SHARE
           ======================================== */}
-
+          
           <button
             type="button"
             className="project-detail__share"
+            onClick={handleShareProject}
+            aria-label={`Compartir ${project.name} por WhatsApp`}
           >
             <Share2 strokeWidth={1.1} />
             Compartir proyecto
           </button>
+
 
           {/* ========================================
               THUMBNAIL GALLERY
